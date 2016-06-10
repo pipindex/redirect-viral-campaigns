@@ -78,6 +78,23 @@ mixpanel.init("20597dcff540172cf5563b343f55a3ab");</script><!-- end Mixpanel -->
 						<input class="form-control-rk <?php if (isset($errors['lastName'])){ echo "error";} ?>" type="text" name="lastName" placeholder="Last Name" value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">
 						<input class="form-control-rk <?php if (isset($errors['email'])){ echo "error";} ?>" type="email" name="email" placeholder="Email" value="<?php if (isset($_POST['email'])){ echo $_POST['email'];} ?>">
 						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="Phone" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
+						<!-- tempStart -->
+						<br><br>
+						<select>
+							<option value="alpha">alpha</option>
+							<option value="beta">beta</option>
+							<option value="gamma">gamma</option>
+						</select>
+						<br>
+						<select>
+							<option value="alpha">alpha</option>
+							<option value="beta">beta</option>
+							<option value="gamma">gamma</option>
+						</select>
+						<br>
+						<input type="password" name="" placeholder="password">
+						<input type="password" name="" placeholder="reenter password">
+						<!-- tempEnd -->
 <input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >
 						<div class="errors-here">
 						<?php if (isset($errors['firstName'])): ?>

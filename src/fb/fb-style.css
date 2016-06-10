@@ -1,0 +1,226 @@
+@font-face { font-family: Montserrat; font-weight: 400; src: url('fonts/Montserrat-Regular.otf'); } 
+@font-face { font-family: Montserrat; font-weight: 200; src: url('fonts/Montserrat-Light.otf'); } 
+@font-face { font-family: Montserrat; font-weight: bold; src: url('fonts/Montserrat-Bold.otf'); }
+body {
+	background: url('fb-main-bg.png') no-repeat center center;
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+html,body { -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility !important;
+}
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+	letter-spacing: 0.5px;
+}
+.container {
+	margin-top: 110px;
+	background: transparent;
+	border-radius: 3px;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+#big-box {
+	background: #fff;
+	border-radius: 0px 0px 3px 3px;
+}
+#top-logo {
+	background: rgba(0,0,0,0.7);
+	text-align: center;
+	padding: 15px 0px;
+}
+#cap {
+	max-width: 24px;
+}
+.logo {
+	margin: 10px 0px;
+	max-width: 184px;
+}
+.top-row {
+	background: url('card-bg.png') no-repeat center center;
+	background-size: cover;
+	color: #fff !important;
+	padding-bottom: 110px;
+	padding-top:100px;
+	text-align: center;
+}
+.top-text p {
+	font-size: 12px;
+}
+.low-row {
+	font-size: 12px;
+}
+.steps {
+	margin-bottom: 20px;
+	padding-top: 15px;
+}
+h1 {
+	margin-bottom: 5px;
+	font-size: 28px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility !important;
+}
+.steps img {
+	display: block;
+	margin: 20px auto 5px;
+	max-width: 26px;
+}
+.top-thing {
+	margin: 15px auto 5px;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+.top-text {
+	padding: 10px 58px;
+}
+::-webkit-input-placeholder {
+   opacity: 0.7;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   opacity: 0.7; 
+}
+form {
+	padding: 18px 40px 20px;
+	text-align: left;
+}
+form input {
+	display: block;
+	width: 100%;
+	font-size: 14px;
+}
+label {
+	margin: 0px;
+	font-weight: 300;
+	font-size: 12px;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(255, 255, 255) !important;
+    background-image: none;
+    color: rgb(0, 0, 0);
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+input.form-control-rk {
+
+}
+.form-control-rk {
+	border: none;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 22px;
+}
+.col-sm-6.text-center {
+	min-height: 230px;
+}
+.col-sm-6.text-center:first-of-type:after {
+	content: ' ';
+	height: 190px;
+	width: 1px;
+	background: #ddd;
+	position: absolute;
+	right: 0px;
+	top: 30px;
+}
+.btn {
+	min-width: 230px;
+}
+.log .btn {
+	border-radius: 4px;
+	border: 1px solid #FB740B;
+	font-size: 16px;
+	color: #FB740B;
+}
+.reg .btn {
+	border-radius: 4px;
+	border: 1px solid #FB740B;
+	font-size: 16px;
+	background: #FB740B;
+	color: #fff;
+}
+.btn img {
+	max-width: 12px;
+	position: relative;
+	bottom: 2px;
+}
+.btns {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+.low-row label, .low-row p {
+	opacity: 0.8;
+}
+#pass {
+		font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+	margin-bottom: 5px;
+}
+@media screen and (max-width: 1300px) {
+	.container {
+	margin-top: 0px;
+}
+}
+@media screen and (max-width: 767px) {
+input.form-control-rk {
+	max-width: 340px;
+	display: block;
+	margin: auto;
+	margin-bottom: 22px;
+}
+#forgot {
+	display: block;
+	max-width: 340px;
+	margin: auto;
+}
+.btns {
+	position: static;
+	bottom: 30px;
+	margin: 20px 0px 20px !important;
+}
+.container {
+	margin: 0px;
+}
+.top-text {
+	padding: 10px 20px;
+}
+form {
+    padding: 20px 10px;
+    text-align: left;
+}
+
+.logo {
+	display:block;
+	margin: 0px auto;
+}
+#top-logo {
+	padding: 13px 0px;
+}
+}
+@media screen and (min-width: 501px) {
+#cap {
+	display: none;
+}
+.logo {
+	display: block;
+	margin: 0px auto;
+}
+}
+@media screen and (max-width: 500px) {
+#cap {
+	display: block;
+	margin: 0px auto;
+}
+.logo {
+	display: none;
+}
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+.container {
+    width: 750px; 
+}
+}

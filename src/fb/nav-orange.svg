@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fb740b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard 1">
+    <path id="Forma_1" data-name="Forma 1" class="cls-1" d="M40.761,434.963a3.5,3.5,0,0,1-4.972,0,3.567,3.567,0,0,1,0-5.012L79.51,385.879,35.789,341.806a3.567,3.567,0,0,1,0-5.012,3.5,3.5,0,0,1,4.972,0l46.207,46.579a3.567,3.567,0,0,1,0,5.012Z" transform="translate(0 -336)"/>
+  </g>
+</svg>

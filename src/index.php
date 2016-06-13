@@ -159,7 +159,6 @@ function showForm($lang)
 
 
     if ($lang === 'de') {
-        unset($courses['foundation']);
         unset($courses['investment']);
         unset($courses['child-nutrition']);
         unset($courses['health']);

@@ -149,6 +149,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 			$("#course").on('change', function() {
   				console.log('this started working');
   				$("#dates").css('display','block');
+  				$(".selectStyle").css('margin-bottom','32px')
 			});
 		
 

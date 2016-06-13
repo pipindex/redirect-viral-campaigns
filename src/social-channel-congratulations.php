@@ -21,6 +21,9 @@ require('helper.php');
 $lang = $_GET['lang'];
 $coursesDates = getDates($_POST['course'],$lang);
 
+foreach ($courses as $key => $Course) {
+	$courseDates[$key] = getDates($key,$lang);
+}
 
 ?>
 
@@ -57,6 +60,11 @@ $coursesDates = getDates($_POST['course'],$lang);
 	for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
 		mixpanel.init("20597dcff540172cf5563b343f55a3ab");</script><!-- end Mixpanel -->
 	<script type="text/javascript">mixpanel.track("Viral Page View")</script>
+
+	<script>
+		courseDates = <?= json_encode($courseDates); ?> ;
+		lang = <?= json_encode($lang); ?>;
+	</script>
 </head>
 
 <body>
@@ -101,7 +109,7 @@ $coursesDates = getDates($_POST['course'],$lang);
 						<h4><?= translateLabel('Select Course',$translations) ?></h4>
 						<div class="selectStyle" id="course">
 							<div>
-								<select class="form-control-rk" id="selectbox" name="course" onchange="this.form.submit()">
+								<select class="form-control-rk courseSelect" id="selectbox" name="course" >
 									<option class="desel" value="" disabled selected>Select Course</option>
 									<?php foreach ($courses as $key => $value): ?>
 										<option value="<?= $key ?>" <?= $key == $_POST['course'] ? 'selected' : '' ?> ><?= $value ?></option>
@@ -110,21 +118,21 @@ $coursesDates = getDates($_POST['course'],$lang);
 							</div>
 						</div>
 					</div>
-					<?php if(count($coursesDates) > 0){ ?>
+
+
+					 
 					<div>
 						<h4><?= translateLabel('Select Dates',$translations) ?></h4>
 						<div class="selectStyle" id="dates">
 							<div>
-								<select class="form-control-rk" name='date'>
+								<select class="form-control-rk courseDates" name='date'>
 									<option class="desel" value="" disabled selected>Select Dates</option>
-									<?php foreach ($coursesDates as $key => $date): ?>
-										<option value="<?= $date ?>"><?= $date ?></option>
-									<?php endforeach ?>
+									 
 								</select>
 							</div>
 						</div>
 					</div>
-					<?php } ?>
+				
 					<div>
 						<h4><?= translateLabel('Enter Password',$translations) ?></h4>
 						<input class="form-control-rk" name = 'password' type="password" placeholder="<?= translateLabel('Enter Password',$translations) ?>">
@@ -156,11 +164,22 @@ $coursesDates = getDates($_POST['course'],$lang);
 	<script>
 
 		
-
-			$("#course").on('change', function() {
-  				console.log('this started working');
+			$("#course").on('change', function() { 
   				$("#dates").css('display','block');
   				$(".selectStyle").css('margin-bottom','32px')
+
+  				if(courseDates[$(".courseSelect").val()].length <= 0){
+  					$("#dates").css('display','none');
+  					$(".selectStyle").css('margin-bottom','-8px')
+  					return;
+  				}
+
+  				$(".courseDates").empty();
+
+  				courseDates[$(".courseSelect").val()].forEach(function(currentValue,index){
+  					$(".courseDates").append('<option>'+currentValue+'</option>');
+  				});
+
 			});
 		
 
@@ -207,5 +226,7 @@ $coursesDates = getDates($_POST['course'],$lang);
 			}
 		}
 	</script>
+
+	 
 </body>
 </html>

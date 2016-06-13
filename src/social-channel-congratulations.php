@@ -17,10 +17,9 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 }
 // die(); */
 
-require('index.php');
-
-
-$coursesDates = getDates($_POST('courseName'));
+require('helper.php');
+$lang = $_GET['lang'];
+$coursesDates = getDates($_POST['course'],$lang);
 
 
 ?>
@@ -77,7 +76,7 @@ $coursesDates = getDates($_POST('courseName'));
 			</ul>
 		</section>
 		<section id="form">
-			<form id="log"  method="POST">
+			<form id="log" method="POST">
 				<section>
 					<div>
 						<h4><?= translateLabel('First Name',$translations) ?></h4>
@@ -102,35 +101,37 @@ $coursesDates = getDates($_POST('courseName'));
 						<h4><?= translateLabel('Select Course',$translations) ?></h4>
 						<div class="selectStyle" id="course">
 							<div>
-								<select class="form-control-rk" id="selectbox" name="courseName" onchange="this.form.submit()">
+								<select class="form-control-rk" id="selectbox" name="course" onchange="this.form.submit()">
 									<option class="desel" value="" disabled selected>Select Course</option>
 									<?php foreach ($courses as $key => $value): ?>
-										<option value="<?= $key ?>"><?= $value ?></option>
+										<option value="<?= $key ?>" <?= $key == $_POST['course'] ? 'selected' : '' ?> ><?= $value ?></option>
 									<?php endforeach ?>
 								</select>
 							</div>
 						</div>
 					</div>
+					<?php if(count($coursesDates) > 0){ ?>
 					<div>
 						<h4><?= translateLabel('Select Dates',$translations) ?></h4>
 						<div class="selectStyle" id="dates">
 							<div>
-								<select class="form-control-rk">
+								<select class="form-control-rk" name='date'>
 									<option class="desel" value="" disabled selected>Select Dates</option>
-									<!-- <?php foreach ($coursesDates as $key => $date): ?>
-										<option value="<?= $key ?>"><?= $date ?></option>
-									<?php endforeach ?> -->
+									<?php foreach ($coursesDates as $key => $date): ?>
+										<option value="<?= $date ?>"><?= $date ?></option>
+									<?php endforeach ?>
 								</select>
 							</div>
 						</div>
 					</div>
+					<?php } ?>
 					<div>
 						<h4><?= translateLabel('Enter Password',$translations) ?></h4>
-						<input class="form-control-rk" type="password" placeholder="<?= translateLabel('Enter Password',$translations) ?>">
+						<input class="form-control-rk" name = 'password' type="password" placeholder="<?= translateLabel('Enter Password',$translations) ?>">
 					</div>
 					<div>
 						<h4><?= translateLabel('Re-enter Password',$translations) ?></h4>
-						<input class="form-control-rk" type="password" placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
+						<input class="form-control-rk" type="password" name ='confirm_password' placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
 					</div>
 				</section>	
 					<input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >

@@ -35,37 +35,36 @@ $errors = array();
   function checkData(){
       global $errors;
       $valid = true;
-      if(!$_POST['firstName'] || empty($_POST['firstName'])){
-          $errors['firstName'] = "First name is mandatory";
+       if(!$_POST['firstName'] || empty($_POST['firstName'])){
+          $errors['firstName'] = translateLabel("EMPTY FIRSTNAME", $translations);
           $valid = false;
       }
       if(!$_POST['lastName'] || empty($_POST['lastName'])){
-          $errors['lastName'] = "Last name is mandatory";
+          $errors['lastName'] = translateLabel("EMPTY LASTNAME", $translations);
           $valid = false;
       }
       if(!$_POST['email'] || empty($_POST['email'])){
-          $errors['email'] = "Email is mandatory";
+          $errors['email'] = translateLabel("EMPTY EMAIL", $translations);
           $valid = false;
       } else if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
-        $errors['email'] = "Incorrect Email Format";
+        $errors['email'] = translateLabel("Empty FirstName", $translations);
           $valid = false;
       }
       if(!$_POST['password'] || empty($_POST['password'])){
-          $errors['password'] = "password is mandatory";
+          $errors['password'] = translateLabel("EMPTY PASSWORD", $translations);
           $valid = false;
       }
       if(!$_POST['confirm_password'] || empty($_POST['confirm_password'])){
-          $errors['password'] = "confirm password is mandatory";
-          $valid = false;
+          $errors['password'] = translateLabel("EMPTY PASSWORD CONFIRM", $translations);
       }
       if($_POST['confirm_password'] != ($_POST['password'])){
-          $errors['password'] = "password and confirm password do not match";
+          $errors['password'] =translateLabel("NOMATCH PASSWORD", $translations);
           $valid = false;
       }if(!$_POST['course'] || empty($_POST['course'])){
-          $errors['course'] = "Please select a course";
+          $errors['course'] = translateLabel("Empty FirstName", $translations);
           $valid = false;
       }if(!$_POST['date'] || empty($_POST['date'])){
-          $errors['date'] = "Please select a Date";
+          $errors['date'] = translateLabel("Empty FirstName", $translations);
           $valid = false;
       }
       /*

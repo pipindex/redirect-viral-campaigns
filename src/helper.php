@@ -1,5 +1,15 @@
 <?php
 
+$lang = $_GET['lang'];
+$defaultTranslationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/en/registration.php';
+$translationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/' . $lang . '/registration.php';
+
+if (!file_exists($translationsPath)) {
+  include $defaultTranslationsPath;
+} else {
+  include $translationsPath;
+}
+
 function convertDate($dateString, $locale=null){
   if($locale){
     $time = strtotime($dateString);

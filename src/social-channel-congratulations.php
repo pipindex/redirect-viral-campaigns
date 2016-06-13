@@ -126,7 +126,7 @@ foreach ($courses as $key => $Course) {
 						<div class="selectStyle" id="dates">
 							<div>
 								<select class="form-control-rk courseDates" name='date'>
-									<option class="desel" value="" disabled selected>Select Dates</option>
+									<option class="desel" value="" disabled selected><?= translateLabel('Select Dates',$translations) ?></option>
 									 
 								</select>
 							</div>

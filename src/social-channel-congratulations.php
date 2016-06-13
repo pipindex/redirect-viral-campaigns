@@ -58,41 +58,40 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 	<article class="container">
 		<section id="banner">
 			<section>
-				<h2>Congratulations!</h2>
-				<p>You have just taken your first step to your life changing educational journey.</p>
+				<h2><?= translateLabel('Congratulations!',$translations) ?></h2>
+				<p><?= translateLabel('You have just taken your first step to your life changing educational journey.',$translations) ?></p>
 			</section>
 		</section>
 		<section id="icons">
 			<ul>
-				<li>1. Select Course</li>
-				<li>2. Start Learning</li>
-				<li>3. Succeed</li>
+				<li><?= translateLabel('1. Select Course',$translations) ?></li>
+				<li><?= translateLabel('2. Start Learning',$translations) ?></li>
+				<li><?= translateLabel('3. Succeed',$translations) ?></li>
 			</ul>
 		</section>
 		<section id="form">
 			<form id="log" action="/" method="POST">
 				<section>
 					<div>
-						<h4> First Name</h4>
-						<input class="form-control-rk <?php if (isset($errors['firstName'])){ echo "error";} ?>" type="text" name="firstName" placeholder="First Name" value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
+						<h4><?= translateLabel('First Name',$translations) ?></h4>
+						<input class="form-control-rk <?php if (isset($errors['firstName'])){ echo "error";} ?>" type="text" name="firstName" placeholder="<?= translateLabel('First Name',$translations) ?>" value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
 					</div>
 					<div>
-						<h4>Last Name</h4>
-						<input class="form-control-rk <?php if (isset($errors['lastName'])){ echo "error";} ?>" type="text" name="lastName" placeholder="Last Name" value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">
+						<h4><?= translateLabel('Last Name',$translations) ?></h4>
+						<input class="form-control-rk <?php if (isset($errors['lastName'])){ echo "error";} ?>" type="text" name="lastName" placeholder="<?= translateLabel('Last Name',$translations) ?>" value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">
 					</div>
 					<div>
-						<h4>Email</h4>
-						<input class="form-control-rk <?php if (isset($errors['email'])){ echo "error";} ?>" type="email" name="email" placeholder="Email" value="<?php if (isset($_POST['email'])){ echo $_POST['email'];} ?>">
+						<h4><?= translateLabel('Email',$translations) ?></h4>
+						<input class="form-control-rk <?php if (isset($errors['email'])){ echo "error";} ?>" type="email" name="email" placeholder="<?= translateLabel('Email',$translations) ?>" value="<?php if (isset($_POST['email'])){ echo $_POST['email'];} ?>">
 					</div>
 					<div>
-						<h4>Phone Number</h4>
-						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="Phone Number" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
+						<h4><?= translateLabel('Phone Number',$translations) ?></h4>
+						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="<?= translateLabel('Phone Number',$translations) ?>" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
 					</div>
 				</section>
 				<section>
 					<div>
-						<h4>Select Course</h4>
-
+						<h4><?= translateLabel('Select Course',$translations) ?></h4>
 						<div class="selectStyle" id="course">
 							<select class="form-control-rk" id="selectbox">
 								<option class="desel" value="" disabled selected>Select Course</option>
@@ -103,7 +102,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 						</div>
 					</div>
 					<div>
-						<h4>Select Dates</h4>
+						<h4><?= translateLabel('Select Dates',$translations) ?></h4>
 						<div class="selectStyle" id="dates">
 							<select class="form-control-rk">
 								<option class="desel" value="" disabled selected>Select Dates</option>
@@ -114,12 +113,12 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 						</div>
 					</div>
 					<div>
-						<h4>Enter Password</h4>
-						<input class="form-control-rk" type="password" placeholder="Enter Password">
+						<h4><?= translateLabel('Enter Password',$translations) ?></h4>
+						<input class="form-control-rk" type="password" placeholder="<?= translateLabel('Enter Password',$translations) ?>">
 					</div>
 					<div>
-						<h4>Re-enter Password</h4>
-						<input class="form-control-rk" type="password" placeholder="Re-enter Password">
+						<h4><?= translateLabel('Re-enter Password',$translations) ?></h4>
+						<input class="form-control-rk" type="password" placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
 					</div>
 					<input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >
 					<div class="errors-here">
@@ -134,11 +133,11 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 						<?php endif; ?>
 
 						<span id="valid-msg" class="hide">✓ Valid</span>
-						<span id="error-msg" class="hide">Invalid number</span>
+						<span id="error-msg" class="hide"><?= translateLabel('Invalid number',$translations) ?></span>
 					</div>
 				</section>
 				<br>
-				<a href="#" id="loger" class="btn" onclick="formSubmit()">Submit</a>
+				<a href="#" id="loger" class="btn" onclick="formSubmit()"><?= translateLabel('Submit',$translations) ?></a>
 			</form>
 		</section>
 	</article>
@@ -152,7 +151,6 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
   				$("#dates").css('display','block');
 			});
 		
-
 
 		var reset = function() {
 	  		$("#phone").removeClass("error");
@@ -196,9 +194,6 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 				$("form").submit();
 			}
 		}
-
-
-	
 	</script>
 </body>
 </html>

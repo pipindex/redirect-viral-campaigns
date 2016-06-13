@@ -50,6 +50,9 @@ function getDates($course,$lang){
         case 'social-media':
           $dates = array(convertDate('2016-06-27 18:00:00','de_DE'),convertDate('2016-07-25 18:00:00','de_DE'));
           break;
+        case 'foundation':
+          $dates = array(convertDate('2016-06-27 18:00:00', 'de_DE'),convertDate('2016-07-25 18:00:00', 'de_DE'));
+          break;
       }
   break;
   case 'fr': 
@@ -69,7 +72,9 @@ function getDates($course,$lang){
         case 'marketing':
           $dates = array(convertDate('2016-06-27 18:00:00','fr_FR'), convertDate('2016-07-25 18:00:00','fr_FR'));
           break;
-          
+        case 'foundation':
+          $dates = array(convertDate('2016-06-27 18:00:00', 'fr_FR'),convertDate('2016-07-25 18:00:00', 'fr_FR'));
+          break;
       }
   break;
   case 'es': 
@@ -79,6 +84,9 @@ function getDates($course,$lang){
           break;
         case 'nutrition':
           $dates = array(convertDate('2016-06-27 18:00:00','es_ES'), convertDate('2016-07-25 18:00:00','es_ES'));
+          break;
+        case 'foundation':
+          $dates = array(convertDate('2016-06-27 18:00:00', 'es_ES'),convertDate('2016-07-25 18:00:00', 'es_ES'));
           break;
       }
   break;
@@ -95,6 +103,9 @@ function getDates($course,$lang){
           break;
         case 'graphic-design':
           $dates = array(convertDate('2016-06-27 18:00:00', 'it_IT'), convertDate('2016-07-25 18:00:00', 'it_IT'));
+          break;
+        case 'foundation':
+          $dates = array(convertDate('2016-06-27 18:00:00', 'it_IT'),convertDate('2016-07-25 18:00:00', 'it_IT'));
           break;
         }  
       break;
@@ -124,6 +135,9 @@ function getDates($course,$lang){
           break;
         case 'business-english':
           $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 22:00:00', 'pt_PT'));
+          break;
+        case 'foundation':
+          $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 19:00:00', 'pt_PT'));
           break;          
       }
   break;
@@ -134,6 +148,9 @@ function getDates($course,$lang){
           break;
         case 'marketing':
           $dates = array(convertDate('2016-06-27 11:00:00', 'jp_JP'),convertDate('2016-06-27 11:00:00', 'jp_JP'));
+          break;
+        case 'foundation':
+          $dates = array(convertDate('2016-06-27 19:00:00', 'jp_JP'),convertDate('2016-07-25 19:00:00', 'jp_JP'));
           break;
       }
   break;
@@ -220,7 +237,7 @@ function getDates($course,$lang){
         case 'foundation':
           $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
-          
+
       }
       break;
     }

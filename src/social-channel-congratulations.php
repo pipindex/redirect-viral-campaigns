@@ -134,8 +134,8 @@ foreach ($courses as $key => $Course) {
 					</div>
 				
 					<div>
-						<h4><?= translateLabel('Enter Password',$translations) ?></h4>
-						<input class="form-control-rk" name = 'password' type="password" placeholder="<?= translateLabel('Enter Password',$translations) ?>">
+						<h4><?= translateLabel('Choose Your Password',$translations) ?></h4>
+						<input class="form-control-rk" name = 'password' type="password" placeholder="<?= translateLabel('Choose Your Password',$translations) ?>">
 					</div>
 					<div>
 						<h4><?= translateLabel('Re-enter Password',$translations) ?></h4>

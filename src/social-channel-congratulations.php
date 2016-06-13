@@ -154,7 +154,7 @@ foreach ($courses as $key => $Course) {
 						<?php if (isset($errors['email'])): ?>
 							<span ><?php echo $errors['email'] ?></span><br />
 						<?php endif; ?> -->
-						<span id="valid-msg" class="hide">✓ Valid</span>
+						<!-- <span id="valid-msg" class="hide">✓ Valid</span> -->
 					</div>
 				<br>
 				<a href="#" id="loger" class="btn" onclick="formSubmit()"><?= translateLabel('Submit',$translations) ?></a>

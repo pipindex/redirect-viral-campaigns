@@ -573,7 +573,7 @@ function getDates($course,$lang){
           
       }
   break;
-  case "default": 
+  default: 
       switch($course){
         case 'photography':
           $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
@@ -669,6 +669,5 @@ function getDates($course,$lang){
       }
       break;
     }
-
     return $dates;
 }

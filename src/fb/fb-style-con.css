@@ -228,6 +228,12 @@ select::-ms-expand {
 	box-shadow: 1px 0 2px #000000;
 }
 
+.errors-here {
+	margin-top: 10px;
+	color: red;
+	text-align: center;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
 	
 	form > section {

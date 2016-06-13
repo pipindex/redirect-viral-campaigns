@@ -1,5 +1,7 @@
 <?php
 
+global $errors;
+
 $lang = $_GET['lang'];
 $defaultTranslationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/en/registration.php';
 $translationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/' . $lang . '/registration.php';
@@ -9,6 +11,7 @@ if (!file_exists($translationsPath)) {
 } else {
   include $translationsPath;
 }
+
 
 function getDates($course,$lang){
   switch($lang){

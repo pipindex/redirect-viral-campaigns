@@ -27,38 +27,39 @@ $errors = array();
   function checkData(){
       global $errors;
       $valid = true;
-       if(!$_POST['firstName'] || empty($_POST['firstName'])){
-          $errors['firstName'] = translateLabel("EMPTY FIRSTNAME", $translations);
-          $valid = false;
-      }
-      if(!$_POST['lastName'] || empty($_POST['lastName'])){
-          $errors['lastName'] = translateLabel("EMPTY LASTNAME", $translations);
-          $valid = false;
-      }
-      if(!$_POST['email'] || empty($_POST['email'])){
-          $errors['email'] = translateLabel("EMPTY EMAIL", $translations);
-          $valid = false;
-      } else if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
-        $errors['email'] = translateLabel("INVALID EMAIL", $translations);
-          $valid = false;
-      }
-      if(!$_POST['password'] || empty($_POST['password'])){
-          $errors['password'] = translateLabel("EMPTY PASSWORD", $translations);
-          $valid = false;
-      }
-      if(!$_POST['confirm_password'] || empty($_POST['confirm_password'])){
-          $errors['password'] = translateLabel("EMPTY PASSWORD CONFIRM", $translations);
-      }
+      //  if(!$_POST['firstName'] || empty($_POST['firstName'])){
+      //     $errors['firstName'] = translateLabel("EMPTY FIRSTNAME", $translations);
+      //     $valid = false;
+      // }
+      // if(!$_POST['lastName'] || empty($_POST['lastName'])){
+      //     $errors['lastName'] = translateLabel("EMPTY LASTNAME", $translations);
+      //     $valid = false;
+      // }
+      // if(!$_POST['email'] || empty($_POST['email'])){
+      //     $errors['email'] = translateLabel("EMPTY EMAIL", $translations);
+      //     $valid = false;
+      // } else if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
+      //   $errors['email'] = translateLabel("INVALID EMAIL", $translations);
+      //     $valid = false;
+      // }
+      // if(!$_POST['password'] || empty($_POST['password'])){
+      //     $errors['password'] = translateLabel("EMPTY PASSWORD", $translations);
+      //     $valid = false;
+      // }
+      // if(!$_POST['confirm_password'] || empty($_POST['confirm_password'])){
+      //     $errors['confirm_password'] = translateLabel("EMPTY PASSWORD CONFIRM", $translations);
+      // }
       if($_POST['confirm_password'] != ($_POST['password'])){
-          $errors['password'] =translateLabel("NOMATCH PASSWORD", $translations);
+          $errors['password'] ="NOMATCH PASSWORD";
           $valid = false;
-      }if(!$_POST['course'] || empty($_POST['course'])){
-          $errors['course'] = translateLabel("Empty COURSE", $translations);
-          $valid = false;
-      }if(!$_POST['date'] || empty($_POST['date'])){
-          $errors['date'] = translateLabel("Empty DATE", $translations);
-          $valid = false;
-      }
+       }   
+      // if(!$_POST['course'] || empty($_POST['course'])){
+      //     $errors['course'] = translateLabel("Empty COURSE", $translations);
+      //     $valid = false;
+      // }if(!$_POST['date'] || empty($_POST['date'])){
+      //     $errors['date'] = translateLabel("Empty DATE", $translations);
+      //     $valid = false;
+      // }
       /*
       if(!$_POST['phone'] || empty($_POST['phone'])){
           $errors['phone'] = "Phone is mandatory";

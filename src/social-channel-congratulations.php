@@ -141,10 +141,11 @@ foreach ($courses as $key => $Course) {
 						<h4><?= translateLabel('Re-enter Password',$translations) ?></h4>
 						<input class="form-control-rk" type="password" name ='confirm_password' placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
 					</div>
+					<div class='errorMsg'><?php if (isset($errors['password'])){ echo translateLabel($errors['password'],$translations);} ?></div>
 				</section>	
 					<input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >
 					<div class="errors-here">
-						<?php if (isset($errors['firstName'])): ?>
+						<!-- <?php if (isset($errors['firstName'])): ?>
 							<span><?php echo $errors['firstName'] ?></span><br />
 						<?php endif; ?>
 						<?php if (isset($errors['lastName'])): ?>
@@ -152,7 +153,7 @@ foreach ($courses as $key => $Course) {
 						<?php endif; ?>
 						<?php if (isset($errors['email'])): ?>
 							<span ><?php echo $errors['email'] ?></span><br />
-						<?php endif; ?>
+						<?php endif; ?> -->
 						<span id="valid-msg" class="hide">✓ Valid</span>
 					</div>
 				<br>
@@ -177,7 +178,7 @@ foreach ($courses as $key => $Course) {
   				$(".courseDates").empty();
 
   				courseDates[$(".courseSelect").val()].forEach(function(currentValue,index){
-  					$(".courseDates").append('<option>'+currentValue+'</option>');
+  					$(".courseDates").append('<option value = "'+currentValue+'"">'+currentValue+'</option>');
   				});
 
 			});

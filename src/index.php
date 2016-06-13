@@ -7,15 +7,15 @@ if ($db->connect_errno) {
 
 mysqli_set_charset($db, "utf8");
 
+$lang="en";
+if(isset($_GET['lang'])) {
+    $lang=$_GET['lang'];
+}
 
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $valid = checkData();
 
-    $lang="en";
-    if(isset($_GET['lang'])) {
-        $lang=$_GET['lang'];
-    }
 
     if (!$valid) {
         showForm($lang);

@@ -170,10 +170,11 @@ select::-ms-expand {
 
 .selectStyle {
     border-bottom: 1px solid #ccc;
-    overflowi: hidden;
+    overflow: hidden;
     background: none;
     width: 400px;
     margin-bottom: -8px; /* 32 */
+    position: relative;
 }
 
 .selectStyle select {
@@ -184,12 +185,27 @@ select::-ms-expand {
     background: transparent;
     background-image: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
     color: #bcb3c0; 
     position: relative;
 }
 
+.selectStyle div:before {
+	content: '';
+	display: block;
+	width: 0; 
+	height: 0; 
+  	border-left: 4px solid transparent;
+  	border-right: 4px solid transparent;
+  	border-top: 4px solid #555;
+  	position: absolute;
+  	right: 0px;
+  	top: 10px;
+}
+
 .selectStyle select:focus {
     outline: none;
+    background-color: #eee;
 }
 
 #dates {

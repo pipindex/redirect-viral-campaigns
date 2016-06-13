@@ -93,23 +93,27 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 					<div>
 						<h4><?= translateLabel('Select Course',$translations) ?></h4>
 						<div class="selectStyle" id="course">
-							<select class="form-control-rk" id="selectbox">
-								<option class="desel" value="" disabled selected>Select Course</option>
-								<option value="alpha">alpha</option>
-								<option value="beta">beta</option>
-								<option value="gamma">gamma</option>
-							</select>
+							<div>
+								<select class="form-control-rk" id="selectbox">
+									<option class="desel" value="" disabled selected>Select Course</option>
+									<option value="alpha">alpha</option>
+									<option value="beta">beta</option>
+									<option value="gamma">gamma</option>
+								</select>
+							</div>
 						</div>
 					</div>
 					<div>
 						<h4><?= translateLabel('Select Dates',$translations) ?></h4>
 						<div class="selectStyle" id="dates">
-							<select class="form-control-rk">
-								<option class="desel" value="" disabled selected>Select Dates</option>
-								<option value="alpha">alpha</option>
-								<option value="beta">beta</option>
-								<option value="gamma">gamma</option>
-							</select>
+							<div>
+								<select class="form-control-rk">
+									<option class="desel" value="" disabled selected>Select Dates</option>
+									<option value="alpha">alpha</option>
+									<option value="beta">beta</option>
+									<option value="gamma">gamma</option>
+								</select>
+							</div>
 						</div>
 					</div>
 					<div>

@@ -110,14 +110,14 @@ $errors = array();
     $row = mysqli_fetch_assoc($res);
     $ip = $_SERVER['REMOTE_ADDR'];
     if($row['inthere'] == 0){
-      $sql = "INSERT INTO Leads(FirstName,LastName,Email,Phone,IPAddress,Product,Course,StartDate,Paaword) VALUES('$firstName','$lastName','$email','$phone','$ip','$product','$course','$startDate','$password') ";
+      $sql = "INSERT INTO Leads(FirstName,LastName,Email,Phone,IPAddress,Product,Course,StartDate,Password,lang) VALUES('$firstName','$lastName','$email','$phone','$ip','$product','$course','$startDate','$password','$lang') ";
 
       mysqli_query($db,$sql);
     }
 
   }
 
-  showForm($lang){
+ function showForm($lang){
 
     $courses = array(
   'photography' => translateLabel("Diploma in Photography", $translations),
@@ -164,103 +164,9 @@ $errors = array();
     include_once "social-channel-congratulations.php";
   }
 
-  getDates($course,$lang){
+ function getDates($course,$lang){
     switch($lang){
-      case 'en': 
-        switch($course){
-          case 'photography':
-            $dates = array();
-            break;
-          case 'lightroom':
-            $dates = array();
-            break;
-          case 'photoshop-bonus':
-            $dates = array();
-            break;
-          case 'photoshop':
-            $dates = array();
-            break;
-          case 'wedding-photo':
-            $dates = array();
-            break;
-          case 'wedding-bonus':
-            $dates = array();
-            break;
-          case 'foundation':
-            $dates = array();
-            break;
-          case 'investment':
-            $dates = array();
-            break;
-          case 'nutrition':
-            $dates = array();
-            break;
-          case 'sports-nutrition':
-            $dates = array();
-            break;
-          case 'health':
-            $dates = array();
-            break;
-          case 'marketing':
-            $dates = array();
-            break;
-          case 'social-media':
-            $dates = array();
-            break;
-          case 'blogging':
-            $dates = array();
-            break;
-          case 'web-development':
-            $dates = array();
-            break;
-            case 'web-design':
-            $dates = array();
-            break;
-            case 'graphic-design':
-            $dates = array();
-            break;
-            case 'mobile-app':
-            $dates = array();
-            break;
-            case 'kids-coding':
-            $dates = array();
-            break;
-            case 'kids-coding-2':
-            $dates = array();
-            break;
-            case 'kids-python':
-            $dates = array();
-            break;
-          case 'excel':
-            $dates = array();
-            break;
-          case 'careers':
-            $dates = array();
-            break;
-          case 'music':
-            $dates = array();
-            break;
-          case 'guitar':
-            $dates = array();
-            break;
-          case 'cookery':
-            $dates = array();
-            break;
-          case 'business-english':
-            $dates = array();
-            break;
-          case 'entrepreneurial':
-            $dates = array();
-            break;
-          case 'budgeting':
-            $dates = array();
-            break;
-          case 'sales':
-            $dates = array();
-            break;
-            
-        }
-    }
+      
     case 'de': 
         switch($course){
           case 'photography':
@@ -355,7 +261,7 @@ $errors = array();
             break;
             
         }
-    }
+    break;
     case 'fr': 
         switch($course){
           case 'photography':
@@ -450,7 +356,7 @@ $errors = array();
             break;
             
         }
-    }
+    break;
     case 'es': 
         switch($course){
           case 'photography':
@@ -545,7 +451,7 @@ $errors = array();
             break;
             
         }
-    }
+    break;
     case 'it': 
         switch($course){
           case 'photography':
@@ -638,9 +544,9 @@ $errors = array();
           case 'sales':
             $dates = array();
             break;
-            
-        }
-    }
+          }  
+        break;
+    
     case 'pt': 
         switch($course){
           case 'photography':
@@ -735,7 +641,7 @@ $errors = array();
             break;
             
         }
-    }
+    break;
     case 'jp': 
         switch($course){
           case 'photography':
@@ -830,6 +736,102 @@ $errors = array();
             break;
             
         }
-    }
+    break;
+    case "default": 
+        switch($course){
+          case 'photography':
+            $dates = array();
+            break;
+          case 'lightroom':
+            $dates = array();
+            break;
+          case 'photoshop-bonus':
+            $dates = array();
+            break;
+          case 'photoshop':
+            $dates = array();
+            break;
+          case 'wedding-photo':
+            $dates = array();
+            break;
+          case 'wedding-bonus':
+            $dates = array();
+            break;
+          case 'foundation':
+            $dates = array();
+            break;
+          case 'investment':
+            $dates = array();
+            break;
+          case 'nutrition':
+            $dates = array();
+            break;
+          case 'sports-nutrition':
+            $dates = array();
+            break;
+          case 'health':
+            $dates = array();
+            break;
+          case 'marketing':
+            $dates = array();
+            break;
+          case 'social-media':
+            $dates = array();
+            break;
+          case 'blogging':
+            $dates = array();
+            break;
+          case 'web-development':
+            $dates = array();
+            break;
+            case 'web-design':
+            $dates = array();
+            break;
+            case 'graphic-design':
+            $dates = array();
+            break;
+            case 'mobile-app':
+            $dates = array();
+            break;
+            case 'kids-coding':
+            $dates = array();
+            break;
+            case 'kids-coding-2':
+            $dates = array();
+            break;
+            case 'kids-python':
+            $dates = array();
+            break;
+          case 'excel':
+            $dates = array();
+            break;
+          case 'careers':
+            $dates = array();
+            break;
+          case 'music':
+            $dates = array();
+            break;
+          case 'guitar':
+            $dates = array();
+            break;
+          case 'cookery':
+            $dates = array();
+            break;
+          case 'business-english':
+            $dates = array();
+            break;
+          case 'entrepreneurial':
+            $dates = array();
+            break;
+          case 'budgeting':
+            $dates = array();
+            break;
+          case 'sales':
+            $dates = array();
+            break;
+            
+        }
+        break;
+      }
   }
 ?>

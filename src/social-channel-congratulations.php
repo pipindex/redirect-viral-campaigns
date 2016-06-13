@@ -80,7 +80,7 @@ mixpanel.init("20597dcff540172cf5563b343f55a3ab");</script><!-- end Mixpanel -->
 						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="Phone" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
 						<!-- tempStart -->
 						<br><br>
-						 <select class="new-input-field" id="course" name="Course" title="<?= translateLabel('Please select your course',$translations) ?>" > 
+						 <select class="new-input-field" id="course" name="course" title="<?= translateLabel('Please select your course',$translations) ?>" > 
                             <option value="0"><?= translateLabel('Please select your course',$translations) ?> </option>
                                                             <?php foreach($courses as $key => $course):?>
                                                                 <option value="<?= $key ?>"><?= $course ?></option>
@@ -89,7 +89,7 @@ mixpanel.init("20597dcff540172cf5563b343f55a3ab");</script><!-- end Mixpanel -->
                           </select>
 						<br>
 						
-						 <select class="new-input-field" id="date" name="Date" title="<?= translateLabel('Please select your date',$translations) ?>" > 
+						 <select class="new-input-field" id="date" name="date" title="<?= translateLabel('Please select your date',$translations) ?>" > 
                             <option value="0"><?= translateLabel('Please select your date',$translations) ?> </option>
                                                             <?php 
                                                             $dates = getDates($course,$lang);

@@ -6,22 +6,32 @@
   }
 
   mysqli_set_charset($db, "utf8");
-  $errors = array();
+$lang = $_GET['lang'];
+$defaultTranslationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/en/registration.php';
+$translationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/' . $lang . '/registration.php';
+
+if (!file_exists($translationsPath)) {
+  include $defaultTranslationsPath;
+} else {
+  include $translationsPath;
+}
+
+$errors = array();
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $valid = checkData();
     if(!$valid){
-      include_once "social-channel-congratulations.php";
+      showForm();
     } else {
       saveData();
       include_once "social-channel-thank-you.php";
 
     }
   } else {
-    $lang = $_GET['lang'];
+   
     showForm();
-    
-    
   }
+
+
   function checkData(){
       global $errors;
       $valid = true;
@@ -44,14 +54,14 @@
           $errors['password'] = "password is mandatory";
           $valid = false;
       }
-      if(!$_POST['confirm_password'] || empty($_POST['comfirm_password'])){
-          $errors['comfirm_password'] = "confirm password is mandatory";
+      if(!$_POST['confirm_password'] || empty($_POST['confirm_password'])){
+          $errors['password'] = "confirm password is mandatory";
           $valid = false;
       }
       if($_POST['confirm_password'] != ($_POST['password'])){
-          $errors['comfirm_password'] = "password and confirm password do not match";
+          $errors['password'] = "password and confirm password do not match";
           $valid = false;
-      }if(!$_POST['course'] || empty($_POST['couser'])){
+      }if(!$_POST['course'] || empty($_POST['course'])){
           $errors['course'] = "Please select a course";
           $valid = false;
       }if(!$_POST['date'] || empty($_POST['date'])){
@@ -87,15 +97,20 @@
     if(isset($_POST['phone'])){
         $phone = mysqli_real_escape_string($db,$_POST['phone']);
     }
+    
     $firstName = mysqli_real_escape_string($db,$_POST['firstName']);
     $lastName = mysqli_real_escape_string($db,$_POST['lastName']);
     $email = mysqli_real_escape_string($db,$_POST['email']);
+    $course = mysqli_real_escape_string($db,$_POST['course']);
+    $startDate = mysqli_real_escape_string($db,$_POST['date']);
+    $password = mysqli_real_escape_string($db,$_POST['password']);
+
     $sql = "SELECT COUNT(*) as inthere FROM Leads WHERE Email = '$email' ";
     $res = mysqli_query($db,$sql);
     $row = mysqli_fetch_assoc($res);
     $ip = $_SERVER['REMOTE_ADDR'];
     if($row['inthere'] == 0){
-      $sql = "INSERT INTO Leads(FirstName,LastName,Email,Phone,IPAddress,Product,Course,StartDate,Paaword) VALUES('$firstName','$lastName','$email','$phone','$ip','$product','$Course','$StartDate','$password') ";
+      $sql = "INSERT INTO Leads(FirstName,LastName,Email,Phone,IPAddress,Product,Course,StartDate,Paaword) VALUES('$firstName','$lastName','$email','$phone','$ip','$product','$course','$startDate','$password') ";
 
       mysqli_query($db,$sql);
     }

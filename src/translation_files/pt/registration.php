@@ -1,26 +1,15 @@
 <?php
 $translations = array(
     'labels' => array(
-        "Thank you for your interest however it appears you have already registered for your course , if you require assistance please contact us at" => "Obrigado por seu interesse, no entanto parece que você já se inscreveu para o seu curso gratuito. Se precisar de assistência, por favor nos contate em ",
-        "support@shawacademy.com" =>"suporte@shawacademy.com",
-         "or" => "ou",
-          "Support:"=>'Suporte:',
-         "Go to my courses"=>"Acessar meus cursos",
-         "Go to Student Area"=>"Acesse área de estudante",
-        "It seems that you have already registered to one of our free courses"=>"Parece que já está registrado para um dos nossos cursos gratuitos",
-        'Voucher Redemption' => 'Usar Cupom',
-        'Loading Next Step...' => 'Carregando página...',
-        'Course Dates' => 'Programação do Curso:',
-        'Questions' => 'Perguntas',
-        'Confirmation' => 'Confirmação',
-        'Step One : Coupon/Voucher Code and Registration' => 'Código do Comprovante e Registro da Conta',
-        'Is this voucher a gift for someone else?' => 'Este voucher é um presente para alguém? ',
-        'Click Here!' => 'Clique aqui!',
-        'Lucky them!' => 'Sorte a deles!',
-        'Best to get the person who will enjoy the course to register their own details!' => 'É melhor que a pessoa que irá desfrutar do curso registre seus próprios detalhes!',
-        'Any questions please contact' => 'Qualquer dúvida por favor entrar em contato',
-        "Our system does not recognise your voucher, but don't worry! Just fill in the fields below, and you'll be registered straight away" => 'Nosso sistema não reconhece seu voucher mas não se preocupe! Basta preencher os campos abaixo que você será registrado imediatamente.',
-        'Coupon/Voucher Code' => 'Código do Cupom',
+        "Congratulations !" => "Parabéns!",
+
+
+        "You have just taken your first step to your life changing educational journey."=>"Você acabou de dar o primeiro passo na jornada educacional que mudará a sua vida.",
+        "Please enter your details below:"=> "Por favor, preencha abaixo com seus dados:",
+            "1. Select Course"=>   "1- Selecione um curso",
+            "2. Start Learning"=>"2- Comece a aprender",
+            "3. Succeed"=>"3- Tenha Sucesso",
+
         'Email does not match with Email Confirmation' => 'Email não corresponde com email de Confirmação',
         'Continue' => 'Continuar',
         'Registration form' => 'Formulário de inscrição',

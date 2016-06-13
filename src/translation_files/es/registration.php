@@ -8,6 +8,14 @@ $translations = array(
          "Go to my courses"=>"Ver mis cursos",
           "Go to Student Area"=>"Ir al área de estudiantes",
         "It seems that you have already registered to one of our free courses"=>"IApareces registrado en alguno de nuestros cursos gratuitos.",
+        "Congratulations!" => "¡Enhorabuena!",
+
+
+        "You have just taken your first step to your life changing educational journey."=>"Acabas de dar el primer paso en el viaje educativo que te cambiará la vida.",
+        "Please enter your details below:"=>"Por favor, introduce tus datos a continuación:",
+            "1. Select Course"=>   "1-Sélectionnez votre formation",
+            "2. Start Learning"=>"2-Commencez à apprendre",
+            "3. Succeed"=>"3-Réussissez",
         'Voucher Redemption' => 'Canje de Vale',
         'Loading Next Step...' => 'Cargando paso siguiente...',
         'Course Dates' => 'Fecha del Curso',

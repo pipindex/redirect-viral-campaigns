@@ -10,6 +10,14 @@ $translations = array(
     "Go to my courses"=>"Go to my courses",
      "Go to Student Area"=>"Go to Student Area",
     "It seems that you have already registered to one of our free courses"=>"It seems that you have already registered to one of our free courses",
+    "Congratulations !" => "Congratulations !",
+
+
+        "You have just taken your first step to your life changing educational journey."=>"You have just taken your first step to your life changing educational journey.",
+        "Please enter your details below:"=> "Please enter your details below:",
+            "1. Select Course"=>   "1. Select Course",
+            "2. Start Learning"=>"2. Start Learning",
+            "3. Succeed"=>"3. Succeed",
         "The Art of Wedding Photography" => "The Art of Wedding Photography",
         "Introduction to Graphic Design and the Adobe Creative Suite" => "Introduction to Graphic Design and the Adobe Creative Suite",
         "Introduction to Web Development"=>"Introduction to Web Development",

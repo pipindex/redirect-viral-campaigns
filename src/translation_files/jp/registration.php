@@ -2,6 +2,16 @@
 
 $translations = array(
     'labels' => array(
+
+        "Congratulations !" => "Congratulations !",
+
+
+        "You have just taken your first step to your life changing educational journey."=>"You have just taken your first step to your life changing educational journey.",
+        "Please enter your details below:"=> "Please enter your details below:",
+            "1. Select Course"=>   "1. Select Course",
+            "2. Start Learning"=>"2. Start Learning",
+            "3. Succeed"=>"3. Succeed",
+            
         "Thank you for your interest however it appears you have already registered for your course , if you require assistance please contact us at" => "お申込みを頂きまして誠にありがとうございます。恐れ入りますが、お客様は既に弊社の無料コースへ登録なされております。お問い合わせはこちらのアドレスへご連絡くださいませ",
         "support@shawacademy.com "=>"contact@shawacademy.com",
         "or"=>"または",

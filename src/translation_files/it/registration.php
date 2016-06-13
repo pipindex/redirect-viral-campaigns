@@ -4,40 +4,16 @@ $translations = array(
 
     'labels' => array(
 
-        "Thank you for your interest however it appears you have already registered for your course , if you require assistance please contact us at" => "Grazie per la tua richiesta, sembra che tu sia già iscritto per il tuo corso gratuito. Se hai bisogno di assistenza, ti prego di contattarci a",
-        "support@shawacademy.com"=>"support@shawacademy.com",
-        "or"=>"oppure a",
-        "Go to my courses"=>"I Miei Corsi",
-        "Go to Student Area" => " Vai All’Area Studenti",
-        "It seems that you have already registered to one of our free courses"=>" Sembra che tu sia già iscritto ad uno dei nostri corsi gratuiti.",
-
-        'Voucher Redemption' => 'Riscossione voucher',
-        'Loading Next Step...' => 'Passo successivo...',
+        
         'Course Dates' => 'Date del Corso',
-        'If you were to request a call with our support team, what time of day would be most suitable? '=>'Nel caso volessi essere contattato da una persona del nostro team di supporto, quale potrebbe essere l’orario della giornata a te più consono?',
-        'If you were to request a call with our support team, what time of day would be most suitable?'=>'Se dovessimo richiederti una telefonata con il nostro team di assistenza, a quale orario preferisci essere contattato?',
-        'Questions' => 'Domande',
+       "Congratulations !" => "Congratulations !",
 
-        'Confirmation' => 'Conferma',
 
-        'Step One : Coupon/Voucher Code and Registration' => 'Step 1: Codice Coupon/Voucher e Creazione Account',
-
-        'Is this voucher a gift for someone else?' => 'Questo Coupon/Voucher é un regalo destinato a qualcun altro?',
-
-        'Click Here!' => 'Clicca qui!',
-
-        'Lucky them!' => 'Buon per loro!',
-
-        'Best to get the person who will enjoy the course to register their own details!' => 'Lascia che sia la persona a cui é destinato il Coupon/Voucher ad inserire i propri dati ed effettuare la registrazione',
-
-        'Any questions please contact' => 'Per qualsiasi dubbio o domanda contattaci: <a href="mailto:support@shawacademy.com">support@shawacademy.com</a>',
-
-        'Coupon/Voucher Code:' => 'Codice Coupon/Voucher:',
-
-        'Continue' => 'Passo Successivo',
-
-        'Registration form' => 'Form di Iscrizione',
-
+        "You have just taken your first step to your life changing educational journey."=>"You have just taken your first step to your life changing educational journey.",
+        "Please enter your details below:"=> "Please enter your details below:",
+            "1. Select Course"=>   "1. Select Course",
+            "2. Start Learning"=>"2. Start Learning",
+            "3. Succeed"=>"3. Succeed",
         'First Name' => 'Nome',
 
         'Last Name' => 'Cognome',

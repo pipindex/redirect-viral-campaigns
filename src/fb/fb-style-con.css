@@ -105,6 +105,10 @@ form > section {
 	vertical-align: top;
 }
 
+form > section > div {
+	position: relative;
+}
+
 form > section:nth-of-type(2) {
 	width: 48%;
 }
@@ -228,10 +232,11 @@ select::-ms-expand {
 	box-shadow: 1px 0 2px #000000;
 }
 
-.errors-here {
-	margin-top: 10px;
+#error-msg {
+	position: absolute;
 	color: red;
-	text-align: center;
+	bottom: -22px;
+	left: 0;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

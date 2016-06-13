@@ -87,6 +87,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 					<div>
 						<h4><?= translateLabel('Phone Number',$translations) ?></h4>
 						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="<?= translateLabel('Phone Number',$translations) ?>" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
+						<span id="error-msg" class="hide"><?= translateLabel('Invalid number',$translations) ?></span>
 					</div>
 				</section>
 				<section>
@@ -137,7 +138,6 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 							<span ><?php echo $errors['email'] ?></span><br />
 						<?php endif; ?>
 						<span id="valid-msg" class="hide">✓ Valid</span>
-						<span id="error-msg" class="hide"><?= translateLabel('Invalid number',$translations) ?></span>
 					</div>
 				<br>
 				<a href="#" id="loger" class="btn" onclick="formSubmit()"><?= translateLabel('Submit',$translations) ?></a>

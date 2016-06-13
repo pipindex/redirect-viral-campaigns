@@ -20,8 +20,6 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 
 require('helper.php');
 
-var_dump($translations['']);
-die;
 ?>
 <!DOCTYPE html>
 <html lang="en">

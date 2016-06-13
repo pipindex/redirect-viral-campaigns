@@ -18,7 +18,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 // die(); */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang= <?= $lang ?>>
 	<head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,20 +80,27 @@ mixpanel.init("20597dcff540172cf5563b343f55a3ab");</script><!-- end Mixpanel -->
 						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="Phone" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
 						<!-- tempStart -->
 						<br><br>
-						<select>
-							<option value="alpha">alpha</option>
-							<option value="beta">beta</option>
-							<option value="gamma">gamma</option>
-						</select>
+						 <select class="new-input-field" id="course" name="Course" title="<?= translateLabel('Please select your course',$translations) ?>" > 
+                            <option value="0"><?= translateLabel('Please select your course',$translations) ?> </option>
+                                                            <?php foreach($courses as $key => $course):?>
+                                                                <option value="<?= $key ?>"><?= $course ?></option>
+                                                            <?php endforeach; ?>
+
+                          </select>
 						<br>
-						<select>
-							<option value="alpha">alpha</option>
-							<option value="beta">beta</option>
-							<option value="gamma">gamma</option>
-						</select>
+						
+						 <select class="new-input-field" id="date" name="Date" title="<?= translateLabel('Please select your date',$translations) ?>" > 
+                            <option value="0"><?= translateLabel('Please select your date',$translations) ?> </option>
+                                                            <?php 
+                                                            $dates = getDates($course,$lang);
+                                                            foreach($dates as $key => $date):?>
+                                                                <option value="<?= $key ?>" ><?= $date ?></option>
+                                                            <?php endforeach; ?>
+
+                          </select>
 						<br>
-						<input type="password" name="" placeholder="password">
-						<input type="password" name="" placeholder="reenter password">
+						<input type="password" name="password" placeholder="password">
+						<input type="password" name="confirm_password" placeholder="reenter password">
 						<!-- tempEnd -->
 <input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >
 						<div class="errors-here">
@@ -106,6 +113,16 @@ mixpanel.init("20597dcff540172cf5563b343f55a3ab");</script><!-- end Mixpanel -->
 						<?php if (isset($errors['email'])): ?>
 							<span ><?php echo $errors['email'] ?></span><br />
 						<?php endif; ?>
+						<?php if (isset($errors['password'])): ?>
+							<span ><?php echo $errors['password'] ?></span><br />
+						<?php endif; ?>
+						<?php if (isset($errors['course'])): ?>
+							<span ><?php echo $errors['course'] ?></span><br />
+						<?php endif; ?>
+						'<?php if (isset($errors['date'])): ?>
+							<span ><?php echo $errors['email'] ?></span><br />
+						<?php endif; ?>
+
 
 						<span id="valid-msg" class="hide">✓ Valid</span>
 						<span id="error-msg" class="hide">Invalid number</span>

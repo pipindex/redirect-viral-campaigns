@@ -11,8 +11,14 @@ mysqli_set_charset($db, "utf8");
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $valid = checkData();
+
+    $lang="en";
+    if(isset($_GET['lang'])) {
+        $lang=$_GET['lang'];
+    }
+
     if (!$valid) {
-        showForm();
+        showForm($lang);
     } else {
         saveData();
         include_once "social-channel-thank-you.php";
@@ -20,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 } else {
 
-    showForm();
+    showForm($lang);
 
   }
 
@@ -117,7 +123,6 @@ function saveData()
 
 function showForm($lang)
 {
-
     $courses = array(
         'photography' => translateLabel("Diploma in Photography", $translations),
         'lightroom' => translateLabel("Mastering Adobe Lightroom", $translations),
@@ -151,6 +156,7 @@ function showForm($lang)
         'sales' => translateLabel("Diploma IN Psychology Of Sales", $translations),
         //'metals-trading' => translateLabel("Introductory Metals Trading", $translations),
     );
+
 
     if ($lang === 'de') {
         unset($courses['foundation']);
@@ -199,6 +205,123 @@ function showForm($lang)
         unset($courses['budgeting']);
         unset($courses['sales']);
     }
+
+    if ($lang === 'it') {
+        unset($courses['lightroom']);
+        unset($courses['photoshop']);
+        unset($courses['wedding-photo']);
+        unset($courses['investment']);
+        unset($courses['sports-nutrition']);
+        unset($courses['diet-weight']);
+        unset($courses['child-nutrition']);
+        unset($courses['health']);
+        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
+        unset($courses['social-media']);
+        unset($courses['blogging']);
+        unset($courses['web-development']);
+        unset($courses['web-design']);
+        unset($courses['mobile-app']);
+        unset($courses['kids-coding']);
+        unset($courses['excel']);
+        unset($courses['careers']);
+        unset($courses['music']);
+        unset($courses['guitar']);
+        unset($courses['beauty']);
+        unset($courses['cookery']);
+        unset($courses['business-english']);
+        unset($courses['entrepreneurial']);
+        unset($courses['budgeting']);
+        unset($courses['sales']);
+        //'metals-trading' => translateLabel("Introductory Metals Trading", $translations),
+
+    }
+    if ($lang === "fr") {
+        unset($courses['lightroom']);
+        unset($courses['photoshop']);
+        unset($courses['wedding-photo']);
+        unset($courses['investment']);
+        unset($courses['child-nutrition']);
+        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
+        unset($courses['social-media']);
+        unset($courses['blogging']);
+        unset($courses['web-development']);
+        unset($courses['web-design']);
+        unset($courses['graphic-design']);
+        unset($courses['mobile-app']);
+        unset($courses['kids-coding']);
+        unset($courses['excel']);
+        unset($courses['careers']);
+        unset($courses['music']);
+        unset($courses['guitar']);
+        unset($courses['beauty']);
+        unset($courses['cookery']);
+        unset($courses['entrepreneurial']);
+        unset($courses['budgeting']);
+        unset($courses['sales']);
+
+    }
+
+    if ($lang === "es") {
+        unset($courses['lightroom']);
+        unset($courses['photoshop']);
+        unset($courses['wedding-photo']);
+        unset($courses['investment']);
+        unset($courses['sports-nutrition']);
+        unset($courses['diet-weight']);
+        unset($courses['child-nutrition']);
+        unset($courses['health']);
+        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
+        unset($courses['social-media']);
+        unset($courses['blogging']);
+        unset($courses['web-development']);
+        unset($courses['web-design']);
+        unset($courses['graphic-design']);
+        unset($courses['mobile-app']);
+        unset($courses['kids-coding']);
+        unset($courses['excel']);
+        unset($courses['careers']);
+        unset($courses['music']);
+        unset($courses['guitar']);
+        unset($courses['beauty']);
+        unset($courses['cookery']);
+        unset($courses['business-english']);
+        unset($courses['entrepreneurial']);
+        unset($courses['budgeting']);
+        unset($courses['sales']);
+
+
+    }
+
+    if ($lang === "jp") {
+        unset($courses['lightroom']);
+        unset($courses['photoshop']);
+        unset($courses['wedding-photo']);
+        unset($courses['investment']);
+        unset($courses['nutrition']);
+        unset($courses['sports-nutrition']);
+        unset($courses['diet-weight']);
+        unset($courses['child-nutrition']);
+        unset($courses['health']);
+        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
+        unset($courses['social-media']);
+        unset($courses['blogging']);
+        unset($courses['web-development']);
+        unset($courses['web-design']);
+        unset($courses['graphic-design']);
+        unset($courses['mobile-app']);
+        unset($courses['kids-coding']);
+        unset($courses['excel']);
+        unset($courses['careers']);
+        unset($courses['music']);
+        unset($courses['guitar']);
+        unset($courses['beauty']);
+        unset($courses['cookery']);
+        unset($courses['entrepreneurial']);
+        unset($courses['budgeting']);
+        unset($courses['sales']);
+    }
+
+
 
     include_once "social-channel-congratulations.php";
 }

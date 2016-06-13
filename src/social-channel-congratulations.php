@@ -68,7 +68,7 @@ foreach ($courses as $key => $Course) {
 </head>
 
 <body>
-	<h1><img src="fb/img/logo.png" alt="Shaw Academy" title="Shaw Academy"></h1>
+	<h1><img src="fb/img/shaw-logo-dark.svg" alt="Shaw Academy" title="Shaw Academy"></h1>
 	<article class="container">
 		<section id="banner">
 			<section>

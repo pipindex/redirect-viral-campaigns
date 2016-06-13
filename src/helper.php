@@ -18,11 +18,13 @@ function convertDate($dateString, $locale=null){
     $oldLocale = setlocale(LC_TIME, $locale);
     setlocale(LC_TIME, $locale);
     return utf8_encode(strftime("%A %b %d, %Y %I:%M %p GMT", $time));
+    setlocale(LC_TIME, $oldLocale);
   }
   else{
     $time = strtotime($dateString);
     $oldLocale = setlocale(LC_TIME, $locale);
     return strftime("%A %b %d, %Y %I:%M %p GMT", $time); 
+    setlocale(LC_TIME, $oldLocale);
   }
 }
 function getDates($course,$lang){

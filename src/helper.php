@@ -17,7 +17,7 @@ function convertDate($dateString, $locale=null){
     $time = strtotime($dateString);
     $oldLocale = setlocale(LC_TIME, $locale);
     setlocale(LC_TIME, $locale);
-    return utf8_encode(strftime("%A %b %d, %Y", $time));
+    return utf8_encode(strftime("%A %b %d, %Y %I:%M%p", $time));
   }
   else{
     $time = strtotime($dateString);

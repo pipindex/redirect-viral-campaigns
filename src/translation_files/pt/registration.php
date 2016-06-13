@@ -470,6 +470,11 @@ http://www.shawacademy.com/pt/login.php',
         "Diploma in Photoshop - Important Details" => "Diploma em Photoshop - Informações Importantes",
         "The entire course consists of 8 lessons, each being 1 hour in duration" => "O curso completo consiste em 8 aulas, cada uma com aproximadamente uma hora de duração.",
         "general-shaw-logo.jpg" => "logo_pt_default_color.png",
+        "Thank you for registering for your live course at Shaw Academy" => "Obrigado por se registrar para seu curso online na Shaw Academy",
+        "Select Course" => "Selecione o curso",
+        "Select Date" => "Selecione a data", 
+        "Re-enter Password" => "Redigite a mesma senha",
+        "*Required Information" => "*Informações obrigatórias",
 
     ) ,
     'descriptions' => array(

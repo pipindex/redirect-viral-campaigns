@@ -16,6 +16,13 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 	}
 }
 // die(); */
+
+require('index.php');
+
+
+$coursesDates = getDates($_POST('courseName'));
+
+
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +77,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 			</ul>
 		</section>
 		<section id="form">
-			<form id="log" action="/" method="POST">
+			<form id="log"  method="POST">
 				<section>
 					<div>
 						<h4><?= translateLabel('First Name',$translations) ?></h4>
@@ -95,11 +102,11 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 						<h4><?= translateLabel('Select Course',$translations) ?></h4>
 						<div class="selectStyle" id="course">
 							<div>
-								<select class="form-control-rk" id="selectbox">
+								<select class="form-control-rk" id="selectbox" name="courseName" onchange="this.form.submit()">
 									<option class="desel" value="" disabled selected>Select Course</option>
-									<option value="alpha">alpha</option>
-									<option value="beta">beta</option>
-									<option value="gamma">gamma</option>
+									<?php foreach ($courses as $key => $value): ?>
+										<option value="<?= $key ?>"><?= $value ?></option>
+									<?php endforeach ?>
 								</select>
 							</div>
 						</div>
@@ -110,9 +117,9 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 							<div>
 								<select class="form-control-rk">
 									<option class="desel" value="" disabled selected>Select Dates</option>
-									<option value="alpha">alpha</option>
-									<option value="beta">beta</option>
-									<option value="gamma">gamma</option>
+									<!-- <?php foreach ($coursesDates as $key => $date): ?>
+										<option value="<?= $key ?>"><?= $date ?></option>
+									<?php endforeach ?> -->
 								</select>
 							</div>
 						</div>

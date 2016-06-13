@@ -241,6 +241,10 @@ select::-ms-expand {
 	left: 0;
 }
 
+.errorMsg{
+	color: red;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
 	
 	form > section {

@@ -3,7 +3,7 @@ $translations = array(
     'labels' => array(
 
 
-"Congratulations !" => "Herzlichen Glückwunsch!",
+"Congratulations!" => "Herzlichen Glückwunsch!",
 
 
         "You have just taken your first step to your life changing educational journey."=>"Sie haben den ersten Schritt auf Ihrer lebensverändernden Bildungsreise getan!",

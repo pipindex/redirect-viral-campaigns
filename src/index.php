@@ -157,8 +157,7 @@ $errors = array();
   //'metals-trading' => translateLabel("Introductory Metals Trading", $translations),
 );
   if ($lang === 'pt'){
-    unset($courses['photoshop-bonus']);
-  } 
+    unset($courses['photoshop-bonus']); 
 
     include_once "social-channel-congratulations.php";
   }

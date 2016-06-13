@@ -58,63 +58,71 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 	<article class="container">
 		<section id="banner">
 			<section>
-				<h2>Congratulations!</h2>
-				<p>You have just taken your first step to your life changing educational journey.</p>
+				<h2><?= translateLabel('Congratulations!',$translations) ?></h2>
+				<p><?= translateLabel('You have just taken your first step to your life changing educational journey.',$translations) ?></p>
 			</section>
 		</section>
 		<section id="icons">
 			<ul>
-				<li>1. Select Course</li>
-				<li>2. Start Learning</li>
-				<li>3. Succeed</li>
+				<li><?= translateLabel('1. Select Course',$translations) ?></li>
+				<li><?= translateLabel('2. Start Learning',$translations) ?></li>
+				<li><?= translateLabel('3. Succeed',$translations) ?></li>
 			</ul>
 		</section>
 		<section id="form">
 			<form id="log" action="/" method="POST">
 				<section>
 					<div>
-						<h4> First Name</h4>
-						<input class="form-control-rk <?php if (isset($errors['firstName'])){ echo "error";} ?>" type="text" name="firstName" placeholder="First Name" value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
+						<h4><?= translateLabel('First Name',$translations) ?></h4>
+						<input class="form-control-rk <?php if (isset($errors['firstName'])){ echo "error";} ?>" type="text" name="firstName" placeholder="<?= translateLabel('First Name',$translations) ?>" value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
 					</div>
 					<div>
-						<h4>Last Name</h4>
-						<input class="form-control-rk <?php if (isset($errors['lastName'])){ echo "error";} ?>" type="text" name="lastName" placeholder="Last Name" value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">
+						<h4><?= translateLabel('Last Name',$translations) ?></h4>
+						<input class="form-control-rk <?php if (isset($errors['lastName'])){ echo "error";} ?>" type="text" name="lastName" placeholder="<?= translateLabel('Last Name',$translations) ?>" value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">
 					</div>
 					<div>
-						<h4>Email</h4>
-						<input class="form-control-rk <?php if (isset($errors['email'])){ echo "error";} ?>" type="email" name="email" placeholder="Email" value="<?php if (isset($_POST['email'])){ echo $_POST['email'];} ?>">
+						<h4><?= translateLabel('Email',$translations) ?></h4>
+						<input class="form-control-rk <?php if (isset($errors['email'])){ echo "error";} ?>" type="email" name="email" placeholder="<?= translateLabel('Email',$translations) ?>" value="<?php if (isset($_POST['email'])){ echo $_POST['email'];} ?>">
 					</div>
 					<div>
-						<h4>Phone Number</h4>
-						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="Phone Number" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
+						<h4><?= translateLabel('Phone Number',$translations) ?></h4>
+						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="<?= translateLabel('Phone Number',$translations) ?>" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
 					</div>
 				</section>
 				<section>
 					<div>
-						<h4>Select Course</h4>
-						<select class="form-control-rk">
-							<option class="desel" value="">Select Course</option>
-							<option value="alpha">alpha</option>
-							<option value="beta">beta</option>
-							<option value="gamma">gamma</option>
-						</select>
+						<h4><?= translateLabel('Select Course',$translations) ?></h4>
+						<div class="selectStyle" id="course">
+							<div>
+								<select class="form-control-rk" id="selectbox">
+									<option class="desel" value="" disabled selected>Select Course</option>
+									<option value="alpha">alpha</option>
+									<option value="beta">beta</option>
+									<option value="gamma">gamma</option>
+								</select>
+							</div>
+						</div>
 					</div>
 					<div>
-						<h4>Select Dates</h4>
-						<select class="form-control-rk">
-							<option class="desel" value="">Select Dates</option>
-							<option value="alpha">alpha</option>
-							<option value="beta">beta</option>
-							<option value="gamma">gamma</option>
-						</select>
+						<h4><?= translateLabel('Select Dates',$translations) ?></h4>
+						<div class="selectStyle" id="dates">
+							<div>
+								<select class="form-control-rk">
+									<option class="desel" value="" disabled selected>Select Dates</option>
+									<option value="alpha">alpha</option>
+									<option value="beta">beta</option>
+									<option value="gamma">gamma</option>
+								</select>
+							</div>
+						</div>
 					</div>
 					<div>
-						<h4>Enter Password</h4>
-						<input class="form-control-rk" type="password" placeholder="Enter Password">
+						<h4><?= translateLabel('Enter Password',$translations) ?></h4>
+						<input class="form-control-rk" type="password" placeholder="<?= translateLabel('Enter Password',$translations) ?>">
 					</div>
 					<div>
-						<h4>Re-enter Password</h4>
-						<input class="form-control-rk" type="password" placeholder="Re-enter Password">
+						<h4><?= translateLabel('Re-enter Password',$translations) ?></h4>
+						<input class="form-control-rk" type="password" placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
 					</div>
 					<input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >
 					<div class="errors-here">
@@ -129,16 +137,26 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 						<?php endif; ?>
 
 						<span id="valid-msg" class="hide">✓ Valid</span>
-						<span id="error-msg" class="hide">Invalid number</span>
+						<span id="error-msg" class="hide"><?= translateLabel('Invalid number',$translations) ?></span>
 					</div>
 				</section>
 				<br>
-				<a href="#" id="loger" class="btn" onclick="formSubmit()">Submit</a>
+				<a href="#" id="loger" class="btn" onclick="formSubmit()"><?= translateLabel('Submit',$translations) ?></a>
 			</form>
 		</section>
 	</article>
 
 	<script>
+
+		
+
+			$("#course").on('change', function() {
+  				console.log('this started working');
+  				$("#dates").css('display','block');
+  				$(".selectStyle").css('margin-bottom','32px')
+			});
+		
+
 		var reset = function() {
 	  		$("#phone").removeClass("error");
 	  		$("#error-msg").addClass("hide");
@@ -181,71 +199,6 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 				$("form").submit();
 			}
 		}
-
-		// Iterate over each select element
-		$('select').each(function () {
-
-		    // Cache the number of options
-		    var $this = $(this),
-		        numberOfOptions = $(this).children('option').length;
-
-		    // Hides the select element
-		    $this.addClass('s-hidden');
-
-		    // Wrap the select element in a div
-		    $this.wrap('<div class="select"></div>');
-
-		    // Insert a styled div to sit over the top of the hidden select element
-		    $this.after('<div class="styledSelect"></div>');
-
-		    // Cache the styled div
-		    var $styledSelect = $this.next('div.styledSelect');
-
-		    // Show the first select option in the styled div
-		    $styledSelect.text($this.children('option').eq(0).text());
-
-		    // Insert an unordered list after the styled div and also cache the list
-		    var $list = $('<ul />', {
-		        'class': 'options'
-		    }).insertAfter($styledSelect);
-
-		    // Insert a list item into the unordered list for each select option
-		    for (var i = 0; i < numberOfOptions; i++) {
-		        $('<li />', {
-		            text: $this.children('option').eq(i).text(),
-		            rel: $this.children('option').eq(i).val()
-		        }).appendTo($list);
-		    }
-
-		    // Cache the list items
-		    var $listItems = $list.children('li');
-
-		    // Show the unordered list when the styled div is clicked (also hides it if the div is clicked again)
-		    $styledSelect.click(function (e) {
-		        e.stopPropagation();
-		        $('div.styledSelect.active').each(function () {
-		            $(this).removeClass('active').next('ul.options').hide();
-		        });
-		        $(this).toggleClass('active').next('ul.options').toggle();
-		    });
-
-		    // Hides the unordered list when a list item is clicked and updates the styled div to show the selected list item
-		    // Updates the select element to have the value of the equivalent option
-		    $listItems.click(function (e) {
-		        e.stopPropagation();
-		        $styledSelect.text($(this).text()).removeClass('active');
-		        $this.val($(this).attr('rel'));
-		        $list.hide();
-		        /* alert($this.val()); Uncomment this for demonstration! */
-		    });
-
-		    // Hides the unordered list when clicking outside of it
-		    $(document).click(function () {
-		        $styledSelect.removeClass('active');
-		        $list.hide();
-		    });
-
-		});	
 	</script>
 </body>
 </html>

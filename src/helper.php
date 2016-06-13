@@ -217,6 +217,9 @@ function getDates($course,$lang){
         case 'sales':
           $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
+        case 'foundation':
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          break;
           
       }
       break;

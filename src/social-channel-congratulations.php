@@ -138,8 +138,8 @@ foreach ($courses as $key => $Course) {
 						<input class="form-control-rk" name = 'password' type="password" placeholder="<?= translateLabel('Choose Your Password',$translations) ?>">
 					</div>
 					<div>
-						<h4><?= translateLabel('Re-enter Password',$translations) ?></h4>
-						<input class="form-control-rk" type="password" name ='confirm_password' placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
+						<h4><?= translateLabel('Confirm Your Password',$translations) ?></h4>
+						<input class="form-control-rk" type="password" name ='confirm_password' placeholder="<?= translateLabel('Confirm Your Password',$translations) ?>">
 					</div>
 					<div class='errorMsg'><?php if (isset($errors['password'])){ echo translateLabel($errors['password'],$translations);} ?></div>
 				</section>	
@@ -164,7 +164,7 @@ foreach ($courses as $key => $Course) {
 
 	<script>
 
-		
+			
 			$("#course").on('change', function() { 
   				$("#dates").css('display','block');
   				$(".selectStyle").css('margin-bottom','32px')
@@ -182,7 +182,8 @@ foreach ($courses as $key => $Course) {
   				});
 
 			});
-		
+			
+			//$("#course").change();
 
 		var reset = function() {
 	  		$("#phone").removeClass("error");

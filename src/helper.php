@@ -1,194 +1,60 @@
 <?php
 
+function convertDate($dateString, $locale=null){
+  if($locale){
+    $time = strtotime($dateString);
+    $oldLocale = setlocale(LC_TIME, $locale);
+    setlocale(LC_TIME, $locale);
+    return utf8_encode(strftime("%A %b %d, %Y", $time));
+  }
+  else{
+    $time = strtotime($dateString);
+    $oldLocale = setlocale(LC_TIME, $locale);
+    return strftime("%A %b %d, %Y", $time); 
+  }
+}
+
 function getDates($course,$lang){
   switch($lang){
     
   case 'de': 
       switch($course){
         case 'photography':
-          $dates = array('2016-06-27 18:00:00 Europe/Berlin', '2016-07-25 18:00:00 Europe/Berlin');
-          break;
-        case 'lightroom':
-          $dates = array();
-          break;
-        case 'photoshop-bonus':
-          $dates = array();
-          break;
-        case 'photoshop':
-          $dates = array();
-          break;
-        case 'wedding-photo':
-          $dates = array();
-          break;
-        case 'wedding-bonus':
-          $dates = array();
-          break;
-        case 'foundation':
-          $dates = array();
-          break;
-        case 'investment':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 18:00:00', 'de_DE'), convertDate('2016-07-25 18:00:00', 'de_DE'));
           break;
         case 'nutrition':
-          $dates = array('2016-06-25 18:00:00 Europe/Berlin','2016-07-25 18:00:00 Europe/Berlin');
+          $dates = array(convertDate('2016-06-27 18:00:00', 'de_DE'),convertDate('2016-07-25 18:00:00', 'de_DE'));
           break;
         case 'sports-nutrition':
-          $dates = array('2016-06-25 18:00:00 Europe/Berlin','2016-07-25 18:00:00 Europe/Berlin');
+          $dates = array(convertDate('2016-06-27 18:00:00', 'de_DE'),convertDate('2016-07-25 18:00:00','de_DE'));
           break;
         case 'health':
           $dates = array();
           break;
         case 'marketing':
-          $dates = array('2016-06-25 18:00:00 Europe/Berlin','2016-07-25 18:00:00 Europe/Berlin');
+          $dates = array(convertDate('2016-06-27 18:00:00','de_DE'),convertDate('2016-07-25 18:00:00','de_DE'));
           break;
         case 'social-media':
-          $dates = array('2016-06-25 18:00:00 Europe/Berlin','2016-07-25 18:00:00 Europe/Berlin');
+          $dates = array(convertDate('2016-06-27 18:00:00','de_DE'),convertDate('2016-07-25 18:00:00','de_DE'));
           break;
-        case 'blogging':
-          $dates = array();
-          break;
-        case 'web-development':
-          $dates = array();
-          break;
-          case 'web-design':
-          $dates = array();
-          break;
-          case 'graphic-design':
-          $dates = array();
-          break;
-          case 'mobile-app':
-          $dates = array();
-          break;
-          case 'kids-coding':
-          $dates = array();
-          break;
-          case 'kids-coding-2':
-          $dates = array();
-          break;
-          case 'kids-python':
-          $dates = array();
-          break;
-        case 'excel':
-          $dates = array();
-          break;
-        case 'careers':
-          $dates = array();
-          break;
-        case 'music':
-          $dates = array();
-          break;
-        case 'guitar':
-          $dates = array();
-          break;
-        case 'cookery':
-          $dates = array();
-          break;
-        case 'business-english':
-          $dates = array();
-          break;
-        case 'entrepreneurial':
-          $dates = array();
-          break;
-        case 'budgeting':
-          $dates = array();
-          break;
-        case 'sales':
-          $dates = array();
-          break;
-          
       }
   break;
   case 'fr': 
       switch($course){
         case 'photography':
-          $dates = array('2016-06-27 18:00:00 Europe/Paris', '2016-07-25 18:00:00 Europe/Paris');
-          break;
-        case 'lightroom':
-          $dates = array();
-          break;
-        case 'photoshop-bonus':
-          $dates = array();
-          break;
-        case 'photoshop':
-          $dates = array();
-          break;
-        case 'wedding-photo':
-          $dates = array();
-          break;
-        case 'wedding-bonus':
-          $dates = array();
-          break;
-        case 'foundation':
-          $dates = array();
-          break;
-        case 'investment':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 18:00:00','fr_FR'), convertDate('2016-07-25 18:00:00','fr_FR'));
           break;
         case 'nutrition':
-          $dates = array('2016-06-25 18:00:00 Europe/Paris','2016-07-25 18:00:00 Europe/Paris');
+          $dates = array(convertDate('2016-06-27 18:00:00','fr_FR'), convertDate('2016-07-25 18:00:00','fr_FR'));
           break;
         case 'sports-nutrition':
-          $dates = array('2016-06-25 18:00:00 Europe/Paris','2016-07-25 18:00:00 Europe/Paris');
+          $dates = array(convertDate('2016-06-27 18:00:00','fr_FR'), convertDate('2016-07-25 18:00:00','fr_FR'));
           break;
         case 'health':
-          $dates = array('2016-06-25 18:00:00 Europe/Paris','2016-07-25 18:00:00 Europe/Paris');
+          $dates = array(convertDate('2016-06-27 18:00:00','fr_FR'), convertDate('2016-07-25 18:00:00','fr_FR'));
           break;
         case 'marketing':
-          $dates = array('2016-06-27 18:00:00 Europe/Paris','2016-07-25 18:00:00 Europe/Paris');
-          break;
-        case 'social-media':
-          $dates = array();
-          break;
-        case 'blogging':
-          $dates = array();
-          break;
-        case 'web-development':
-          $dates = array();
-          break;
-          case 'web-design':
-          $dates = array();
-          break;
-          case 'graphic-design':
-          $dates = array();
-          break;
-          case 'mobile-app':
-          $dates = array();
-          break;
-          case 'kids-coding':
-          $dates = array();
-          break;
-          case 'kids-coding-2':
-          $dates = array();
-          break;
-          case 'kids-python':
-          $dates = array();
-          break;
-        case 'excel':
-          $dates = array();
-          break;
-        case 'careers':
-          $dates = array();
-          break;
-        case 'music':
-          $dates = array();
-          break;
-        case 'guitar':
-          $dates = array();
-          break;
-        case 'cookery':
-          $dates = array();
-          break;
-        case 'business-english':
-          $dates = array();
-          break;
-        case 'entrepreneurial':
-          $dates = array();
-          break;
-        case 'budgeting':
-          $dates = array();
-          break;
-        case 'sales':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 18:00:00','fr_FR'), convertDate('2016-07-25 18:00:00','fr_FR'));
           break;
           
       }
@@ -196,189 +62,26 @@ function getDates($course,$lang){
   case 'es': 
       switch($course){
         case 'photography':
-          $dates = array('2016-07-25 18:00:00 Europe/Madrid', '2016-06-25 18:00:00 Europe/Madrid');
-          break;
-        case 'lightroom':
-          $dates = array();
-          break;
-        case 'photoshop-bonus':
-          $dates = array();
-          break;
-        case 'photoshop':
-          $dates = array();
-          break;
-        case 'wedding-photo':
-          $dates = array();
-          break;
-        case 'wedding-bonus':
-          $dates = array();
-          break;
-        case 'foundation':
-          $dates = array();
-          break;
-        case 'investment':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 18:00:00','es_ES'), convertDate('2016-07-25 18:00:00','es_ES'));
           break;
         case 'nutrition':
-          $dates = array('2016-06-25 18:00:00 Europe/Madrid','2016-07-25 18:00:00 Europe/Madrid');
+          $dates = array(convertDate('2016-06-27 18:00:00','es_ES'), convertDate('2016-07-25 18:00:00','es_ES'));
           break;
-        case 'sports-nutrition':
-          $dates = array();
-          break;
-        case 'health':
-          $dates = array();
-          break;
-        case 'marketing':
-          $dates = array();
-          break;
-        case 'social-media':
-          $dates = array();
-          break;
-        case 'blogging':
-          $dates = array();
-          break;
-        case 'web-development':
-          $dates = array();
-          break;
-          case 'web-design':
-          $dates = array();
-          break;
-          case 'graphic-design':
-          $dates = array();
-          break;
-          case 'mobile-app':
-          $dates = array();
-          break;
-          case 'kids-coding':
-          $dates = array();
-          break;
-          case 'kids-coding-2':
-          $dates = array();
-          break;
-          case 'kids-python':
-          $dates = array();
-          break;
-        case 'excel':
-          $dates = array();
-          break;
-        case 'careers':
-          $dates = array();
-          break;
-        case 'music':
-          $dates = array();
-          break;
-        case 'guitar':
-          $dates = array();
-          break;
-        case 'cookery':
-          $dates = array();
-          break;
-        case 'business-english':
-          $dates = array();
-          break;
-        case 'entrepreneurial':
-          $dates = array();
-          break;
-        case 'budgeting':
-          $dates = array();
-          break;
-        case 'sales':
-          $dates = array();
-          break;
-          
       }
   break;
   case 'it': 
       switch($course){
         case 'photography':
-          $dates = array('2016-06-27 18:00:00 Europe/Rome', '2016-07-25 18:00:00 Europe/Rome');
-          break;
-        case 'lightroom':
-          $dates = array();
-          break;
-        case 'photoshop-bonus':
-          $dates = array();
-          break;
-        case 'photoshop':
-          $dates = array();
-          break;
-        case 'wedding-photo':
-          $dates = array();
-          break;
-        case 'wedding-bonus':
-          $dates = array();
-          break;
-        case 'foundation':
-          $dates = array();
-          break;
-        case 'investment':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 18:00:00', 'it_IT'), convertDate('2016-07-25 18:00:00', 'it_IT'));
           break;
         case 'nutrition':
-          $dates = array('2016-06-25 18:00:00 Europe/Rome','2016-07-25 18:00:00 Europe/Rome');
-          break;
-        case 'sports-nutrition':
-          $dates = array();
-          break;
-        case 'health':
-          $dates = array();
+          $dates = $dates = array(convertDate('2016-06-27 18:00:00', 'it_IT'), convertDate('2016-07-25 18:00:00', 'it_IT'));;
           break;
         case 'marketing':
-          $dates = array('2016-06-25 18:00:00 Europe/Rome','2016-07-25 18:00:00 Europe/Rome');
+          $dates = array(convertDate('2016-06-27 18:00:00', 'it_IT'), convertDate('2016-07-25 18:00:00', 'it_IT'));
           break;
-        case 'social-media':
-          $dates = array();
-          break;
-        case 'blogging':
-          $dates = array();
-          break;
-        case 'web-development':
-          $dates = array();
-          break;
-          case 'web-design':
-          $dates = array();
-          break;
-          case 'graphic-design':
-          $dates = array('2016-06-27 18:00:00 Europe/Rome','2016-07-25 18:00:00 Europe/Rome');
-          break;
-          case 'mobile-app':
-          $dates = array();
-          break;
-          case 'kids-coding':
-          $dates = array();
-          break;
-          case 'kids-coding-2':
-          $dates = array();
-          break;
-          case 'kids-python':
-          $dates = array();
-          break;
-        case 'excel':
-          $dates = array();
-          break;
-        case 'careers':
-          $dates = array();
-          break;
-        case 'music':
-          $dates = array();
-          break;
-        case 'guitar':
-          $dates = array();
-          break;
-        case 'cookery':
-          $dates = array();
-          break;
-        case 'business-english':
-          $dates = array();
-          break;
-        case 'entrepreneurial':
-          $dates = array();
-          break;
-        case 'budgeting':
-          $dates = array();
-          break;
-        case 'sales':
-          $dates = array();
+        case 'graphic-design':
+          $dates = array(convertDate('2016-06-27 18:00:00', 'it_IT'), convertDate('2016-07-25 18:00:00', 'it_IT'));
           break;
         }  
       break;
@@ -386,7 +89,7 @@ function getDates($course,$lang){
   case 'pt': 
       switch($course){
         case 'photography':
-          $dates = array('2016-06-27 22:00:00 Europe/Lisbon', '2016-07-25 22:00:00 Europe/Lisbon');
+          $dates = array(convertDate('2016-06-27 22:00:00', 'pt_PT'), convertDate('2016-07-25 22:00:00', 'pt_PT'));
           break;
         case 'lightroom':
           $dates = array();
@@ -395,275 +98,111 @@ function getDates($course,$lang){
           $dates = array();
           break;
         case 'photoshop':
-          $dates = array('2016-06-25 19:00:00 Europe/Lisbon','2016-07-25 22:00:00 Europe/Lisbon');
-          break;
-        case 'wedding-photo':
-          $dates = array();
-          break;
-        case 'wedding-bonus':
-          $dates = array();
-          break;
-        case 'foundation':
-          $dates = array();
-          break;
-        case 'investment':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 22:00:00','pt_PT'));
           break;
         case 'nutrition':
-          $dates = array('2016-06-25 19:00:00 Europe/Lisbon','2016-07-25 22:00:00 Europe/Lisbon');
-          break;
-        case 'sports-nutrition':
-          $dates = array();
-          break;
-        case 'health':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 22:00:00', 'pt_PT'));
           break;
         case 'marketing':
-          $dates = array('2016-06-25 19:00:00 Europe/Lisbon','2016-07-25 22:00:00 Europe/Lisbon');
+          $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 22:00:00', 'pt_PT'));
           break;
-        case 'social-media':
-          $dates = array();
-          break;
-        case 'blogging':
-          $dates = array();
-          break;
-        case 'web-development':
-          $dates = array();
-          break;
-          case 'web-design':
-          $dates = array();
-          break;
-          case 'graphic-design':
-          $dates = array('2016-06-27 19:00:00 Europe/Lisbon','2016-07-25 22:00:00 Europe/Lisbon');
-          break;
-          case 'mobile-app':
-          $dates = array();
-          break;
-          case 'kids-coding':
-          $dates = array();
-          break;
-          case 'kids-coding-2':
-          $dates = array();
-          break;
-          case 'kids-python':
-          $dates = array();
-          break;
-        case 'excel':
-          $dates = array();
-          break;
-        case 'careers':
-          $dates = array();
-          break;
-        case 'music':
-          $dates = array();
-          break;
-        case 'guitar':
-          $dates = array();
-          break;
-        case 'cookery':
-          $dates = array();
+        case 'graphic-design':
+          $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 22:00:00', 'pt_PT'));
           break;
         case 'business-english':
-          $dates = array('2016-06-27 19:00:00 Europe/Lisbon','2016-07-25 22:00:00 Europe/Lisbon');
-          break;
-        case 'entrepreneurial':
-          $dates = array();
-          break;
-        case 'budgeting':
-          $dates = array();
-          break;
-        case 'sales':
-          $dates = array();
-          break;
-          
+          $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 22:00:00', 'pt_PT'));
+          break;          
       }
   break;
   case 'jp': 
       switch($course){
         case 'photography':
-          $dates = array('2016-06-27 11:30:00 Asia/Tokyo' ,'2016-07-25 11:30:00 Asia/Tokyo');
-          break;
-        case 'lightroom':
-          $dates = array();
-          break;
-        case 'photoshop-bonus':
-          $dates = array();
-          break;
-        case 'photoshop':
-          $dates = array();
-          break;
-        case 'wedding-photo':
-          $dates = array();
-          break;
-        case 'wedding-bonus':
-          $dates = array();
-          break;
-        case 'foundation':
-          $dates = array();
-          break;
-        case 'investment':
-          $dates = array();
-          break;
-        case 'nutrition':
-          $dates = array();
-          break;
-        case 'sports-nutrition':
-          $dates = array();
-          break;
-        case 'health':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 11:30:00', 'jp_JP'), convertDate('2016-07-25 11:30:00', 'jp_JP'));
           break;
         case 'marketing':
-          $dates = array('2016-06-25 11:00:00 Asia/Tokyo','2016-06-27 11:00:00 Asia/Tokyo');
+          $dates = array(convertDate('2016-06-27 11:00:00', 'jp_JP'),convertDate('2016-06-27 11:00:00', 'jp_JP'));
           break;
-        case 'social-media':
-          $dates = array();
-          break;
-        case 'blogging':
-          $dates = array();
-          break;
-        case 'web-development':
-          $dates = array();
-          break;
-          case 'web-design':
-          $dates = array();
-          break;
-          case 'graphic-design':
-          $dates = array();
-          break;
-          case 'mobile-app':
-          $dates = array();
-          break;
-          case 'kids-coding':
-          $dates = array();
-          break;
-          case 'kids-coding-2':
-          $dates = array();
-          break;
-          case 'kids-python':
-          $dates = array();
-          break;
-        case 'excel':
-          $dates = array();
-          break;
-        case 'careers':
-          $dates = array();
-          break;
-        case 'music':
-          $dates = array();
-          break;
-        case 'guitar':
-          $dates = array();
-          break;
-        case 'cookery':
-          $dates = array();
-          break;
-        case 'business-english':
-          $dates = array();
-          break;
-        case 'entrepreneurial':
-          $dates = array();
-          break;
-        case 'budgeting':
-          $dates = array();
-          break;
-        case 'sales':
-          $dates = array();
-          break;
-          
       }
   break;
   default: 
       switch($course){
         case 'photography':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'lightroom':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
-          break;
-        case 'photoshop-bonus':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'photoshop':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'wedding-photo':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
-          break;
-        case 'wedding-bonus':
-          $dates = array();
-          break;
-        case 'foundation':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'investment':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'nutrition':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'sports-nutrition':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
-          break;
-        case 'health':
-          $dates = array();
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'marketing':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'social-media':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'blogging':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'web-development':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
-          case 'web-design':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+        case 'web-design':
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
-          case 'graphic-design':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+        case 'graphic-design':
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
           case 'mobile-app':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
           case 'kids-coding':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
           case 'kids-coding-2':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
           case 'kids-python':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'excel':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'careers':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'music':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'guitar':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'cookery':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'business-english':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'Entrepreneurial':
-          $dates = array('2015-06-29 19:00:00 GMT','2015-08-03 19:00:00 GMT');
+          $dates = array(convertDate('2015-06-29 19:00:00'),convertDate('2015-08-03 19:00:00'));
           break;
         case 'budgeting':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
         case 'sales':
-          $dates = array('2016-06-25 19:00:00 GMT','2016-07-25 19:00:00 GMT');
+          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
           break;
           
       }

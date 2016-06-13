@@ -92,6 +92,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 				<section>
 					<div>
 						<h4>Select Course</h4>
+
 						<div class="selectStyle" id="course">
 							<select class="form-control-rk" id="selectbox">
 								<option class="desel" value="" disabled selected>Select Course</option>
@@ -152,6 +153,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 			});
 		
 
+
 		var reset = function() {
 	  		$("#phone").removeClass("error");
 	  		$("#error-msg").addClass("hide");
@@ -194,6 +196,9 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 				$("form").submit();
 			}
 		}
+
+
+	
 	</script>
 </body>
 </html>

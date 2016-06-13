@@ -154,6 +154,7 @@ input::-moz-placeholder {  /* Firefox 19+ */
 input:-ms-input-placeholder {  
    color: #bcb3c0;  
 }
+
 /*
 select {
 	-webkit-appearance: none;

@@ -6,15 +6,8 @@
   }
 
 mysqli_set_charset($db, "utf8");
-$lang = $_GET['lang'];
-$defaultTranslationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/en/registration.php';
-$translationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/' . $lang . '/registration.php';
 
-if (!file_exists($translationsPath)) {
-  include $defaultTranslationsPath;
-} else {
-  include $translationsPath;
-}
+
 $errors = array();
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $valid = checkData();

@@ -158,7 +158,7 @@ $errors = array();
 );
   if ($lang === 'pt'){
     unset($courses['photoshop-bonus']); 
-
+  }
     include_once "social-channel-congratulations.php";
   }
 

@@ -87,29 +87,34 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 					<div>
 						<h4><?= translateLabel('Phone Number',$translations) ?></h4>
 						<input class="form-control-rk" id="phone" type="tel" name="phone" placeholder="<?= translateLabel('Phone Number',$translations) ?>" value="<?php if (isset($_POST['phone'])){ echo $_POST['phone'];} ?>">
+						<span id="error-msg" class="hide"><?= translateLabel('Invalid number',$translations) ?></span>
 					</div>
 				</section>
 				<section>
 					<div>
 						<h4><?= translateLabel('Select Course',$translations) ?></h4>
 						<div class="selectStyle" id="course">
-							<select class="form-control-rk" id="selectbox">
-								<option class="desel" value="" disabled selected>Select Course</option>
-								<option value="alpha">alpha</option>
-								<option value="beta">beta</option>
-								<option value="gamma">gamma</option>
-							</select>
+							<div>
+								<select class="form-control-rk" id="selectbox">
+									<option class="desel" value="" disabled selected>Select Course</option>
+									<option value="alpha">alpha</option>
+									<option value="beta">beta</option>
+									<option value="gamma">gamma</option>
+								</select>
+							</div>
 						</div>
 					</div>
 					<div>
 						<h4><?= translateLabel('Select Dates',$translations) ?></h4>
 						<div class="selectStyle" id="dates">
-							<select class="form-control-rk">
-								<option class="desel" value="" disabled selected>Select Dates</option>
-								<option value="alpha">alpha</option>
-								<option value="beta">beta</option>
-								<option value="gamma">gamma</option>
-							</select>
+							<div>
+								<select class="form-control-rk">
+									<option class="desel" value="" disabled selected>Select Dates</option>
+									<option value="alpha">alpha</option>
+									<option value="beta">beta</option>
+									<option value="gamma">gamma</option>
+								</select>
+							</div>
 						</div>
 					</div>
 					<div>
@@ -120,6 +125,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 						<h4><?= translateLabel('Re-enter Password',$translations) ?></h4>
 						<input class="form-control-rk" type="password" placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
 					</div>
+				</section>	
 					<input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >
 					<div class="errors-here">
 						<?php if (isset($errors['firstName'])): ?>
@@ -131,11 +137,8 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 						<?php if (isset($errors['email'])): ?>
 							<span ><?php echo $errors['email'] ?></span><br />
 						<?php endif; ?>
-
 						<span id="valid-msg" class="hide">✓ Valid</span>
-						<span id="error-msg" class="hide"><?= translateLabel('Invalid number',$translations) ?></span>
 					</div>
-				</section>
 				<br>
 				<a href="#" id="loger" class="btn" onclick="formSubmit()"><?= translateLabel('Submit',$translations) ?></a>
 			</form>
@@ -149,6 +152,7 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 			$("#course").on('change', function() {
   				console.log('this started working');
   				$("#dates").css('display','block');
+  				$(".selectStyle").css('margin-bottom','32px')
 			});
 		
 

@@ -102,6 +102,11 @@ form > section {
 	width: 50%;
 	padding-left: 50px;
 	padding-bottom: 10px;
+	vertical-align: top;
+}
+
+form > section > div {
+	position: relative;
 }
 
 form > section:nth-of-type(2) {
@@ -154,7 +159,6 @@ input::-moz-placeholder {  /* Firefox 19+ */
 input:-ms-input-placeholder {  
    color: #bcb3c0;  
 }
-
 /*
 select {
 	-webkit-appearance: none;
@@ -173,21 +177,39 @@ select::-ms-expand {
     overflow: hidden;
     background: none;
     width: 400px;
+    margin-bottom: -8px; /* 32 */
+    position: relative;
 }
 
 .selectStyle select {
-    padding: 5px 0;
+    padding: 1px 0;
     width: 100%;
     border: none;
     box-shadow: none;
     background: transparent;
     background-image: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
     color: #bcb3c0; 
+    position: relative;
+}
+
+.selectStyle div:before {
+	content: '';
+	display: block;
+	width: 0; 
+	height: 0; 
+  	border-left: 4px solid transparent;
+  	border-right: 4px solid transparent;
+  	border-top: 4px solid #555;
+  	position: absolute;
+  	right: 0px;
+  	top: 10px;
 }
 
 .selectStyle select:focus {
     outline: none;
+    background-color: #eee;
 }
 
 #dates {
@@ -210,15 +232,23 @@ select::-ms-expand {
 	box-shadow: 1px 0 2px #000000;
 }
 
+#error-msg {
+	position: absolute;
+	color: red;
+	bottom: -22px;
+	left: 0;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
 	
 	form > section {
 		padding-left: 35px;
 	}
 
-	.form-control-rk {
+	.form-control-rk, .selectStyle {
 		width: 300px;
 	}
+
 }
 
 @media (max-width: 767px) {
@@ -237,7 +267,7 @@ select::-ms-expand {
 		border-right: none;
 	}
 
-	.form-control-rk {
+	.form-control-rk, .selectStyle {
 		width: 400px;
 	}
 
@@ -265,7 +295,7 @@ select::-ms-expand {
 		padding-left: 40px;
 	}
 
-	.form-control-rk {
+	.form-control-rk, .selectStyle {
 		width: 250px;
 	}
 

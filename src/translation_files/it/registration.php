@@ -152,7 +152,7 @@ $translations = array(
 
         'Password:' => 'Password',
 
-        'Confirm Your Password:' => 'Conferma password:',
+        'Confirm Your Password' => 'Conferma password',
 
         'Please Select the Dates which fit your schedule:' => 'Seleziona le date in cui desideri prendere parte al corso',
 

@@ -16,6 +16,12 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 	}
 }
 // die(); */
+
+
+require('helper.php');
+
+var_dump($translations['']);
+die;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +70,7 @@ mixpanel.init("20597dcff540172cf5563b343f55a3ab");</script><!-- end Mixpanel -->
 					<div class="col-sm-12 top-text">
 
 						<h1>Thank you!</h1>
-						<h3>Thank you for registering for your live course at Shaw Academy.</h3>
+						<h3><?= translateLabel('Thank you for registering for your live course at Shaw Academy.',$translations) ?></h3>
 					</div>
 				</div>
 				<div class="row low-stuff">

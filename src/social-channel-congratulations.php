@@ -112,7 +112,7 @@ foreach ($courses as $key => $Course) {
 								<select class="form-control-rk courseSelect" id="selectbox" name="course" >
 									<option class="desel" value="" disabled selected>Select Course</option>
 									<?php foreach ($courses as $key => $value): ?>
-										<option value="<?= $key ?>" <?= $key == $_POST['course'] ? 'selected' : '' ?> ><?= $value ?></option>
+										<option value="<?= $key ?>" <?= $key == $_POST['course'] ? 'selected' : '' ?> ><?= translateLabel($value,$translations) ?></option>
 									<?php endforeach ?>
 								</select>
 							</div>

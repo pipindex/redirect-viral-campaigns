@@ -7,12 +7,15 @@ $translations = array(
    
     "Congratulations !" => "Congratulations !",
 
-
+        "You're about to join the Future of Education" => "You're about to join the Future of Education"
         "You have just taken your first step to your life changing educational journey."=>"You have just taken your first step to your life changing educational journey.",
         "Please enter your details below:"=> "Please enter your details below:",
-            "1. Select Course"=>   "1. Select Course",
-            "2. Start Learning"=>"2. Start Learning",
-            "3. Succeed"=>"3. Succeed",
+            "Learn"=>"Learn",
+            "Succeed"=>"Succeed",
+            "Attend"=>"Attend",
+            "Interact"=>"Interact",
+            "Register"=>"Register",
+            "Submit"=>"Submit",
         "The Art of Wedding Photography" => "The Art of Wedding Photography",
         "Introduction to Graphic Design and the Adobe Creative Suite" => "Introduction to Graphic Design and the Adobe Creative Suite",
         "Introduction to Web Development"=>"Introduction to Web Development",
@@ -34,7 +37,7 @@ $translations = array(
 
         'Email Confirmation:' => 'Email Confirmation:',
 
-        'Phone:' => 'Phone:',
+        'Phone Number' => 'Phone:',
 
         'EMPTY FIRSTNAME' => 'First Name is Mandatory',
 

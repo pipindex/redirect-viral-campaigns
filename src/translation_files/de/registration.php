@@ -5,12 +5,15 @@ $translations = array(
 
 "Congratulations!" => "Herzlichen Glückwunsch!",
 
-
+        "You're about to join the Future of Education" => "Sie sind gerade dabei, an der Weiterbildung der Zukunft teilzunehmen. ",
         "You have just taken your first step to your life changing educational journey."=>"Sie haben den ersten Schritt auf Ihrer lebensverändernden Bildungsreise getan!",
          "Please enter your details below:"=>"Bitte geben Sie Ihre Daten ein:",
-            "1. Select Course"=>   "1. Kurs wählen",
-            "2. Start Learning"=>"2. Mit dem Lernen beginnen",
-            "3. Succeed"=>"3. Erfolgreich abschließen",
+            "Attend"=>"Besuchen",
+            "Interact"=>"Interagieren",
+            "Register"=>"Neu registrieren",
+            "Submit"=>"Absenden",
+            "Learn"=>"Lernen",
+            "Succeed"=>"Erfolgreich abschließen",
         "The Art of Wedding Photography" => "The Art of Wedding Photography",
         "Introduction to Graphic Design and the Adobe Creative Suite" => "Introduction to Graphic Design and the Adobe Creative Suite",
         "Introduction to Web Development"=>"Introduction to Web Development",
@@ -46,7 +49,7 @@ $translations = array(
         'Please confirm your email' => 'E-Mail bestätigen',
         'Please insert your Phone Number' => 'Telefonnummer',
         'Please insert here the Coupon/Voucher Code you purchased' => 'Gutscheincode',
-        'Phone' => 'Telefon',
+        'Phone Number' => 'Telefon',
         'EMPTY FIRSTNAME' => 'Vorname ist obligatorisch',
         'EMPTY LASTNAME' => 'Nachname ist obligatorisch',
         'EMPTY EMAIL' => 'E-Mail ist obligatorisch',

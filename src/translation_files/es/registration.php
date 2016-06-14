@@ -4,13 +4,15 @@ $translations = array(
 
         "Congratulations!" => "¡Enhorabuena!",
 
-
+        "You're about to join the Future of Education" => "Estás a punto de unirte a la Educación del Futuro",
         "You have just taken your first step to your life changing educational journey."=>"Acabas de dar el primer paso en el viaje educativo que te cambiará la vida.",
         "Please enter your details below:"=>"Por favor, introduce tus datos a continuación:",
-            "1. Select Course"=>   "1-Sélectionnez votre formation",
-            "2. Start Learning"=>"2-Commencez à apprendre",
-            "3. Succeed"=>"3-Réussissez",
-       
+            "Succeed"=>"Réussissez",
+            "Attend"=>"Besuchen",
+            "Interact"=>"Interagieren",
+            "Register"=>"Neu registrieren",
+            "Submit"=>"Enviar",
+            "Learn"=>"Aprender",
         'First Name' => 'Nombre(s)',
         'Last Name' => 'Apellido(s)',
         'Email' => 'Correo Electrónico',

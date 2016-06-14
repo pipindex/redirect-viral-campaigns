@@ -11,9 +11,15 @@ $translations = array(
 
         "You have just taken your first step to your life changing educational journey."=>"You have just taken your first step to your life changing educational journey.",
         "Please enter your details below:"=> "Please enter your details below:",
-            "1. Select Course"=>   "1. Select Course",
-            "2. Start Learning"=>"2. Start Learning",
-            "3. Succeed"=>"3. Succeed",
+            
+            "Succeed"=>"Succeed",
+            "Attend"=>"Attend",
+            "Interact"=>"Interact",
+            "Register"=>"Register",
+            "Submit"=>"Submit",
+            "Learn"=>"Learn",
+
+             "You're about to join the Future of Education" => "Stai per partecipare al Futuro dell’Educazione",
         'First Name' => 'Nome',
 
         'Last Name' => 'Cognome',
@@ -26,7 +32,7 @@ $translations = array(
 
         'Email Confirmation' => 'Conferma email',
 
-        'Phone' => 'Telefono',
+        'Phone Number' => 'Telefono',
 
         'Please insert your Phone Number' => 'Inserisci il tuo numero fisso',
 

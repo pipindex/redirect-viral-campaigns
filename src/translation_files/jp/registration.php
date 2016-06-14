@@ -4,7 +4,7 @@ $translations = array(
     'labels' => array(
 
         "Congratulations !" => "Congratulations !",
-
+        "You're about to join the Future of Education" => "あなたの未来を変える教育へ参加しましょう",
 
         "You have just taken your first step to your life changing educational journey."=>"You have just taken your first step to your life changing educational journey.",
         "Please enter your details below:"=> "Please enter your details below:",
@@ -37,7 +37,7 @@ $translations = array(
         'Email Confirmation' => '確認Eメールアドレス　',
         'Please insert your email' => 'メールアドレスをご入力ください。',
         'Please confirm your email' => '確認メールアドレスを入力して下さい。',
-        'Phone' => '電話番号',
+        'Phone Number' => '電話番号',
         'required' => "必須事項",
         'Please insert your Phone Number' => '電話番号を入力して下さい。',
         'Please insert here the Coupon/Voucher Code you purchased' => 'お手持ちのクーポンコード/クーポン番号/クーポンID/セキュリティコードをご入力ください。',

@@ -6,10 +6,15 @@ $translations = array(
 
         "You have just taken your first step to your life changing educational journey."=>"Você acabou de dar o primeiro passo na jornada educacional que mudará a sua vida.",
         "Please enter your details below:"=> "Por favor, preencha abaixo com seus dados:",
-            "1. Select Course"=>   "1- Selecione um curso",
-            "2. Start Learning"=>"2- Comece a aprender",
-            "3. Succeed"=>"3- Tenha Sucesso",
+            "Succeed"=>"Tenha Sucesso",
 
+            "Attend"=>"assistir",
+            "Interact"=>"Interagir",
+            "Register"=>"Register",
+            "Submit"=>"Enviar",
+            "Learn"=>"Aprender",
+            
+                "You're about to join the Future of Education" => "Você está prestes a juntar-se ao futuro da educação",
         'Email does not match with Email Confirmation' => 'Email não corresponde com email de Confirmação',
         'Continue' => 'Continuar',
         'Registration form' => 'Formulário de inscrição',
@@ -20,7 +25,7 @@ $translations = array(
         'Please insert your email' => 'Por favor, insira seu Email',
         'Please confirm your email' => 'Por favor, Confirme seu Email',
         'Email Confirmation' => 'Confirmar Email:',
-        'Phone' => 'Telefone',
+        'Phone Number' => 'Telefone',
         'Please insert your Phone Number' => 'Telefone',
         'EMPTY FIRSTNAME' => 'Nome é Obrigatório',
         'EMPTY LASTNAME' => 'Sobrenome é Obrigatório',

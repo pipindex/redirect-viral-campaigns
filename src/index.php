@@ -21,8 +21,6 @@ if (!file_exists($translationsPath)) {
     include $translationsPath;
 }
 
-var_dump($translations);
-
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $valid = checkData();

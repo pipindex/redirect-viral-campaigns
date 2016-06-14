@@ -15,7 +15,13 @@
 			return;
 		}
 	}
-	// die(); */	
+	// die(); */
+	require('helper.php');
+$lang = $_GET['lang'];
+$coursesDates = getDates($_POST['course'],$lang);
+foreach ($courses as $key => $Course) {
+	$courseDates[$key] = getDates($key,$lang);
+}	
 	?>
 
 <!DOCTYPE html>

@@ -130,7 +130,7 @@
 						<div class="selectStyle" id="dates">
 							<div>
 								<select class="form-control-rk courseDates" name='date'>
-									<option class="desel" value="" disabled selected><?= translateLabel('Select Dates',$translations) ?></option>
+									<option class="desel" value="" disabled selected><?= translateLabel('Select Date',$translations) ?></option>
 									 
 								</select>
 							</div>
@@ -140,7 +140,7 @@
 						<input class="new-input-field" name="password" type="password" placeholder="<?= translateLabel('Choose Your Password',$translations) ?>">
 					</div>
 					<div id="input-div" class="password-icon">
-						<input class="new-input-field" name="password" type="password" placeholder="<?= translateLabel('Confirm Your Password',$translations) ?>">
+						<input class="new-input-field" name="password" type="password" placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
 					</div>
 					<div class='errorMsg'><?php if (isset($errors['password'])){ echo translateLabel($errors['password'],$translations);} ?></div>
 					<input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >

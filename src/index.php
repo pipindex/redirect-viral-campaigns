@@ -7,19 +7,14 @@ if ($db->connect_errno) {
 
 mysqli_set_charset($db, "utf8");
 
+
+
 $lang="en";
 if(isset($_GET['lang'])) {
     $lang=$_GET['lang'];
 }
 
-$defaultTranslationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/en/registration.php';
-$translationsPath = $_SERVER['DOCUMENT_ROOT'] . '/translation_files/' . $lang . '/registration.php';
-
-if (!file_exists($translationsPath)) {
-    include $defaultTranslationsPath;
-} else {
-    include $translationsPath;
-}
+include_once "helper.php";
 
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

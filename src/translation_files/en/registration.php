@@ -7,7 +7,7 @@ $translations = array(
    
     "Congratulations !" => "Congratulations !",
 
-        "You're about to join the Future of Education" => "You're about to join the Future of Education"
+        "You're about to join the Future of Education" => "You're about to join the Future of Education",
         "You have just taken your first step to your life changing educational journey."=>"You have just taken your first step to your life changing educational journey.",
         "Please enter your details below:"=> "Please enter your details below:",
             "Learn"=>"Learn",

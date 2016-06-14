@@ -19,21 +19,15 @@ include "helper.php";
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $valid = checkData();
-
-
     if (!$valid) {
-        
         showForm($lang,$translations);
     } else {
         saveData();
         include_once "social-channel-thank-you.php";
-
     }
 } else {
-   
     showForm($lang,$translations);
-
-  }
+}
 
 
   function checkData(){

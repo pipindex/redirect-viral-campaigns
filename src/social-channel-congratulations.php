@@ -99,7 +99,7 @@
 				</h4>
 				<form id="log" action="/" class="roundtable" method="POST">
 					<div id="input-div" class="name-icon">
-						<input class="new-input-field <?php if (isset($errors['firstName'])){ echo "error";} ?>" id="full_name" name="firstName" type="text" placeholder="<?= translateLabel('Full Name',$translations) ?> " value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
+						<input class="new-input-field <?php if (isset($errors['firstName'])){ echo "error";} ?>" id="full_name" name="firstName" type="text" placeholder="<?= translateLabel('First Name',$translations) ?> " value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
 					</div>
 					<div id="input-div" class="name-icon">
 						<input class="new-input-field <?php if (isset($errors['lastName'])){ echo "error";} ?>" id="last_name" name="lastName" type="text" placeholder="<?= translateLabel('Last Name',$translations) ?> " value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">

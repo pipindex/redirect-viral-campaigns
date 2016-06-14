@@ -14,8 +14,6 @@ if(isset($_GET['lang'])) {
     $lang=$_GET['lang'];
 }
 
-include "helper.php";
-
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $valid = checkData();

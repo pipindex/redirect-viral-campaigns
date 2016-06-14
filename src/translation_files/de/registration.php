@@ -82,7 +82,17 @@ $translations = array(
         'EMPTY PASSWORD' => 'Passwort ist ein Pflichtfeld',
         'EMPTY PASSWORD CONFIRM' => 'Passwort bestätigen ist ein Pflichfeld',
         'NOMATCH PASSWORD' => 'Ihre Passwörter stimmen nicht überein.',
-        
+        "Thank you for registering for your live course at Shaw Academy"=>"Vielen Dank, dass Sie sich für einen live Kurs an der Shaw Academy entschieden habe.",
+
+        "Select Course"=>"Kurs wählen",
+         
+        "Select Date"=>"Datum wählen",
+         
+        "Choose Your Password"=>"Passwort wählen",
+         
+        "Re-enter Password"=>"Passwort wiederholen",
+         
+        "*Required Information"=>"*Erforderliche Information"
     ) 
 
 );

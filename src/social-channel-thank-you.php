@@ -16,10 +16,6 @@ if (!empty($_COOKIE["Remind_Me_ShawAcademy"])) {
 	}
 }
 // die(); */
-
-
-require('helper.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,18 +53,33 @@ mixpanel.init("20597dcff540172cf5563b343f55a3ab");</script><!-- end Mixpanel -->
 	</head>
 <body>
 	<div class="container-fluid lrg-bg">
-	<div class="row" style="text-align: center; padding-bottom: 20px; padding-top: 50px">
-		<div id="top-logo" class="col-md-12" >
-		<img src="fb/shaw-logo-dark.svg" alt="Shaw Academy Logo" class="logo" style="height:27px" />
+	<div class="row">
+		<div id="top-logo" class="col-md-12">
+		<img src="fb/ShawAcademy-Logo.png" alt="Shaw Academy Logo" class="logo" />
+		<img id="cap" src="fb/Short_logo.png" alt="Start Learning" class="" />
 		</div>
 	</div>
 		<div class="container">
-			<div id="big-box" class="col-lg-8 col-lg-offset-2 col-sm-12" style="height: 230px;">
+			<div id="big-box" class="col-lg-8 col-lg-offset-2 col-sm-12">
 				<div class="row top-row">
 					<div class="col-sm-12 top-text">
 
 						<h1>Thank you!</h1>
-						<h3><?= translateLabel('Thank you for registering for your live course at Shaw Academy.',$translations) ?></h3>
+						<h3>We will send your course options before the live start dates next week.</h3>
+					</div>
+				</div>
+				<div class="row steps">
+					<div class="col-xs-4 text-center">
+						<img src="fb/step1.svg" alt="Select Your Course" />
+								<p>1-Select Course</p>
+					</div>
+					<div class="col-xs-4 text-center">
+						<img src="fb/step2.svg" alt="Start Learning" />
+								<p>2-Start Learning</p>
+					</div>
+					<div class="col-xs-4 text-center">
+								<img src="fb/step3.svg" alt="Succeed" />
+								<p>3-Succeed</p>
 					</div>
 				</div>
 				<div class="row low-stuff">

@@ -14,7 +14,7 @@ if(isset($_GET['lang'])) {
     $lang=$_GET['lang'];
 }
 
-include_once "helper.php";
+include "helper.php";
 
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -22,15 +22,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     if (!$valid) {
-        showForm($lang);
+        
+        showForm($lang,$translations);
     } else {
         saveData();
         include_once "social-channel-thank-you.php";
 
     }
 } else {
-
-    showForm($lang);
+   
+    showForm($lang,$translations);
 
   }
 
@@ -125,7 +126,7 @@ function saveData()
 
 }
 
-function showForm($lang)
+function showForm($lang,$translations)
 {
     $courses = array(
         'photography' => translateLabel("Diploma in Photography", $translations),
@@ -160,7 +161,6 @@ function showForm($lang)
         'sales' => translateLabel("Diploma IN Psychology Of Sales", $translations),
         //'metals-trading' => translateLabel("Introductory Metals Trading", $translations),
     );
-
 
     if ($lang === 'de') {
         unset($courses['investment']);

@@ -83,8 +83,8 @@
 	<body>
 		<header>
 			<div id="logo-div">
-				<div id="shaw-logo-div"> <img id="desktop-logo" src="http://www.shawacademy.com/registration/img/shaw2.svg" alt="Shaw Academy"> 
-					<img id="mobile-logo" src="http://www.shawacademy.com/registration/img/just-s.svg">
+				<div id="shaw-logo-div"> <img id="desktop-logo" src="/fb/images/shaw2.svg" alt="Shaw Academy"> 
+					<img id="mobile-logo" src="/fb/images/just-s.svg">
 				</div>
 			</div>
 		</header>

@@ -1,0 +1,116 @@
+#questionSlider .slide{
+	position:fixed;
+	top:-9999999999999px;
+	
+	min-height:250px;
+	opacity:0;
+	transition: opacity .5s ease-in-out;
+  	-moz-transition: opacity .5s ease-in-out;
+  	-webkit-transition: opacity .5s ease-in-out;
+}
+
+#questionSlider .slide.active{
+	position:inherit;
+	opacity:1;
+}
+.btn.backbtn,.btn.nextbtn{
+	background-color:#e1681d;
+	color:white;
+}
+.popin.hidden{
+	opacity:0;
+}
+.btn.backbtn{
+	margin-left:15px;
+}
+.btn.nextbtn{
+	margin-right:15px;
+}
+.popin{
+	opacity:1;
+	color:grey;
+	padding:5px;
+	
+    font-size: 12px;
+    min-height:66px;
+   	padding-bottom:30%;
+    border-bottom:1px solid grey;
+}
+.sidebar{
+	padding: 0 6% 0 3%;
+}
+div .popin:first-child{
+	margin-top:5%;
+	
+}
+div .popin:first-child div{
+
+	padding-top:10px;
+}
+.popin i{
+	font-size:20px;
+	display:block;
+	padding-top:17px;
+}
+.popin div{
+	
+}
+.popin:nth-child(2) div{
+	padding-top:10px;
+}
+#progressbar{
+	padding:0px;
+	
+}
+#compelte{
+	font-weight:bold;
+}
+.prog{
+	height:35px;
+	font-size:119%;
+	color:#d9d9d9; 
+	padding-top:1%;
+	background-color:#d9d9d9;
+	display:inline-block;
+}
+.redemptionpages .redemptionpanel h3{
+	margin-top:10px;
+}
+.prog.green{
+	background-color:#5BD825;
+	color:white;
+	font-weight:bold;
+	overflow: visible;
+	white-space: nowrap;
+	
+}
+#phonewarn{
+	color:red;
+	margin: 0;
+	font-weight:bold;
+}
+
+@media (min-width: 770px) and (max-width:991px){
+	.sidebar{
+		display:none;
+	}
+}
+
+.blue{
+	color:#6EB1C4;	
+}
+.darkblue{
+	color:#4A4D54;
+}
+.red{
+	color:#BE7D77;
+}
+.darkred{
+	color:#D15D50;
+}
+.orange{
+	color:#E9C9B0;
+}
+.green{
+	color:#B6DEA9;
+}

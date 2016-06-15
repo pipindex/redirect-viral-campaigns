@@ -123,6 +123,7 @@ foreach ($courses as $key => $Course) {
 					<div id="input-div">
 						<div class="selectStyle" id="course">
 							<div>
+								<img src="fb/images/course.svg" width="26.672" height="26.672" class="pageIcon">
 								<select class="form-control-rk courseSelect" id="selectbox" name="course">
 									<option class="desel" value="" disabled selected><?= translateLabel('Select Course',$translations) ?></option>
 									<?php foreach ($courses as $key => $value): ?>
@@ -135,6 +136,7 @@ foreach ($courses as $key => $Course) {
 					<div id="input-div">
 						<div class="selectStyle" id="dates">
 							<div>
+								<img src="fb/images/date.svg" width="26.672" height="26.672" class="pageIcon">
 								<select class="form-control-rk courseDates" name='date'>
 									<option class="desel" value="" disabled selected><?= translateLabel('Select Date',$translations) ?></option>
 									 
@@ -142,7 +144,7 @@ foreach ($courses as $key => $Course) {
 							</div>
 						</div>
 					</div>
-					<div id="input-div">
+					<div id="input-div" class="password-icon">
 						<img src="fb/images/eye.svg" alt="show password" id="showPassword" width="26.672" height="26.672">
 						<input class="new-input-field" name="password" type="password" placeholder="<?= translateLabel('Choose Your Password',$translations) ?>">
 					</div>

@@ -40,9 +40,6 @@ function getDates($course,$lang){
         case 'sports-nutrition':
           $dates = array(convertDate('2016-06-27 18:00:00', 'de_DE'),convertDate('2016-07-25 18:00:00','de_DE'));
           break;
-        case 'health':
-          $dates = array();
-          break;
         case 'marketing':
           $dates = array(convertDate('2016-06-27 18:00:00','de_DE'),convertDate('2016-07-25 18:00:00','de_DE'));
           break;
@@ -113,12 +110,6 @@ function getDates($course,$lang){
       switch($course){
         case 'photography':
           $dates = array(convertDate('2016-06-27 22:00:00', 'pt_PT'), convertDate('2016-07-25 22:00:00', 'pt_PT'));
-          break;
-        case 'lightroom':
-          $dates = array();
-          break;
-        case 'photoshop-bonus':
-          $dates = array();
           break;
         case 'photoshop':
           $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 22:00:00','pt_PT'));

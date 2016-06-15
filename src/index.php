@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$valid) {
         showForm($lang,$translations);
     } else {
-        saveData();
+        saveData($lang);
         include_once "social-channel-thank-you.php";
     }
 } else {
@@ -84,7 +84,7 @@ function translateLabel($string, $translations)
     return $string;
 }
 
-function saveData()
+function saveData($lang)
 {
     global $db;
     $phone = "";
@@ -156,13 +156,18 @@ function showForm($lang,$translations)
     );
 
     if ($lang === 'de') {
+        unset($courses['lightroom']);
+        unset($courses['photoshop']);
+        unset($courses['wedding-photo']);
         unset($courses['investment']);
+        unset($courses['diet-weight']);
         unset($courses['child-nutrition']);
         unset($courses['health']);
-        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
         unset($courses['blogging']);
+        unset($courses['web-development']);
         unset($courses['web-design']);
         unset($courses['graphic-design']);
+        unset($courses['mobile-app']);
         unset($courses['kids-coding']);
         unset($courses['excel']);
         unset($courses['careers']);
@@ -184,7 +189,6 @@ function showForm($lang,$translations)
         unset($courses['diet-weight']);
         unset($courses['child-nutrition']);
         unset($courses['health']);
-        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
         unset($courses['social-media']);
         unset($courses['blogging']);
         unset($courses['web-development']);
@@ -211,7 +215,6 @@ function showForm($lang,$translations)
         unset($courses['diet-weight']);
         unset($courses['child-nutrition']);
         unset($courses['health']);
-        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
         unset($courses['social-media']);
         unset($courses['blogging']);
         unset($courses['web-development']);
@@ -228,7 +231,6 @@ function showForm($lang,$translations)
         unset($courses['entrepreneurial']);
         unset($courses['budgeting']);
         unset($courses['sales']);
-        //'metals-trading' => translateLabel("Introductory Metals Trading", $translations),
 
     }
     if ($lang === "fr") {
@@ -236,8 +238,8 @@ function showForm($lang,$translations)
         unset($courses['photoshop']);
         unset($courses['wedding-photo']);
         unset($courses['investment']);
+        unset($courses['diet-weight']);
         unset($courses['child-nutrition']);
-        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
         unset($courses['social-media']);
         unset($courses['blogging']);
         unset($courses['web-development']);
@@ -251,10 +253,10 @@ function showForm($lang,$translations)
         unset($courses['guitar']);
         unset($courses['beauty']);
         unset($courses['cookery']);
+        unset($courses['business-english']);
         unset($courses['entrepreneurial']);
         unset($courses['budgeting']);
         unset($courses['sales']);
-
     }
 
     if ($lang === "es") {
@@ -266,7 +268,7 @@ function showForm($lang,$translations)
         unset($courses['diet-weight']);
         unset($courses['child-nutrition']);
         unset($courses['health']);
-        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
+        unset($courses['marketing']);
         unset($courses['social-media']);
         unset($courses['blogging']);
         unset($courses['web-development']);
@@ -284,7 +286,6 @@ function showForm($lang,$translations)
         unset($courses['entrepreneurial']);
         unset($courses['budgeting']);
         unset($courses['sales']);
-
 
     }
 
@@ -298,7 +299,6 @@ function showForm($lang,$translations)
         unset($courses['diet-weight']);
         unset($courses['child-nutrition']);
         unset($courses['health']);
-        //'health-live' => translateLabel("Online Health and Fitness Programme - Live (French only)", $translations),
         unset($courses['social-media']);
         unset($courses['blogging']);
         unset($courses['web-development']);
@@ -312,6 +312,7 @@ function showForm($lang,$translations)
         unset($courses['guitar']);
         unset($courses['beauty']);
         unset($courses['cookery']);
+        unset($courses['business-english']);
         unset($courses['entrepreneurial']);
         unset($courses['budgeting']);
         unset($courses['sales']);

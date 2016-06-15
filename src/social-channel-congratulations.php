@@ -142,11 +142,12 @@ foreach ($courses as $key => $Course) {
 							</div>
 						</div>
 					</div>
-					<div id="input-div" class="password-icon">
+					<div id="input-div">
+						<img src="fb/images/eye.svg" alt="show password" id="showPassword" width="26.672" height="26.672">
 						<input class="new-input-field" name="password" type="password" placeholder="<?= translateLabel('Choose Your Password',$translations) ?>">
 					</div>
 					<div id="input-div">
-						<input class="new-input-field" name="confirm_password" type="password" placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
+						<input class="new-input-field" name="confirm_password" type="hidden" placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
 					</div>
 					<div class='errorMsg'><?php if (isset($errors['password'])){ echo translateLabel($errors['password'],$translations);} ?></div>
 					<input  type="hidden" name="product" value="<?php  echo $_GET['product']; ?>" >
@@ -192,6 +193,21 @@ foreach ($courses as $key => $Course) {
 	  		$("#valid-msg").addClass("hide");
 		};
 
+		function togglePasswordVisibility() {
+			console.log($("input[name='password']").attr('type'));
+			if($("input[name='password']").attr('type') == 'password') {
+				$("input[name='password']").attr('type', 'text');
+				$("#showPassword").css('opacity', '.4');
+			} else if($("input[name='password']").attr('type') == 'text') {
+				$("input[name='password']").attr('type', 'password');
+				$("#showPassword").css('opacity', '1');
+			}
+		}
+
+		$("#showPassword").click(function() {
+			togglePasswordVisibility();
+		});
+
 		$("#phone").intlTelInput({
 			autoFormat: true,
 			nationalMode:false,
@@ -218,6 +234,7 @@ foreach ($courses as $key => $Course) {
 		  }
 		});*/
 		formSubmit = function() {
+			$("input[name='password']").attr('type', 'password');
 			if($('#phone').val() == ""){
 				$("#phone").addClass("error");
 				$("#error-msg").removeClass("hide");

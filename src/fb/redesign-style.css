@@ -578,6 +578,10 @@ ol {
 
 /*# sourceMappingURL=redesign-style.css.map */
 
+#register-steps {
+  margin-bottom: -3px;
+}
+
 #dates {
   opacity: .5;
   pointer-events: none;
@@ -597,6 +601,7 @@ form {
 
 div.intl-tel-input {
   width: 83.33% !important;
+  margin-top: 2.917em;
 }
 
 .selected-flag {
@@ -613,4 +618,22 @@ div.intl-tel-input {
 
 #phone {
   width: 100%;
+}
+
+#showPassword {
+  position: absolute;
+  top: 55%;
+  right: 12%;
+  cursor: pointer;
+}
+
+#showPassword:hover {
+  opacity: .6;
+}
+
+#error-msg {
+  position: absolute;
+  left: 40%;
+  bottom: -17px;
+  color: red;
 }

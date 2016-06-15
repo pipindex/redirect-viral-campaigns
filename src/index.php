@@ -53,10 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // if(!$_POST['confirm_password'] || empty($_POST['confirm_password'])){
       //     $errors['confirm_password'] = translateLabel("EMPTY PASSWORD CONFIRM", $translations);
       // }
-      if($_POST['confirm_password'] != ($_POST['password'])){
-          $errors['password'] ="NOMATCH PASSWORD";
-          $valid = false;
-       }   
+      // if($_POST['confirm_password'] != ($_POST['password'])){
+      //     $errors['password'] ="NOMATCH PASSWORD";
+      //     $valid = false;
+      //  }   
       // if(!$_POST['course'] || empty($_POST['course'])){
       //     $errors['course'] = translateLabel("Empty COURSE", $translations);
       //     $valid = false;
@@ -99,8 +99,9 @@ function saveData()
         $phone = mysqli_real_escape_string($db, $_POST['phone']);
     }
 
-    $firstName = mysqli_real_escape_string($db, $_POST['firstName']);
-    $lastName = mysqli_real_escape_string($db, $_POST['lastName']);
+      $fullName = explode(" ", $_POST['name']);
+    $firstName = mysqli_real_escape_string($db, $fullName[0]);
+    $lastName = mysqli_real_escape_string($db, $fullName[1]);
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $course = mysqli_real_escape_string($db, $_POST['course']);
     $startDate = mysqli_real_escape_string($db, $_POST['date']);

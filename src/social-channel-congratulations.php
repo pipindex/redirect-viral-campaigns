@@ -140,7 +140,7 @@ foreach ($courses as $key => $Course) {
 						</div>
 					</div>
 					<div id="input-div" class="password-icon">
-						<img src="fb/images/eye.svg" alt="show password" id="showPassword" width="26.672" height="26.672">
+						<img src="fb/images/eye.svg" alt="show password" id="showPassword" width="16" height="14">
 						<input class="new-input-field" name="password" type="password" placeholder="<?= translateLabel('Choose Your Password',$translations) ?>">
 					</div>
 					<div id="input-div">
@@ -194,10 +194,10 @@ foreach ($courses as $key => $Course) {
 			console.log($("input[name='password']").attr('type'));
 			if($("input[name='password']").attr('type') == 'password') {
 				$("input[name='password']").attr('type', 'text');
-				$("#showPassword").css('opacity', '.4');
+				$("#showPassword").css('opacity', '.5');
 			} else if($("input[name='password']").attr('type') == 'text') {
 				$("input[name='password']").attr('type', 'password');
-				$("#showPassword").css('opacity', '1');
+				$("#showPassword").css('opacity', '.8');
 			}
 		}
 

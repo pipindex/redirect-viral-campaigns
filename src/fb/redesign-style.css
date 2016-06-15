@@ -634,20 +634,22 @@ div.intl-tel-input {
 
 #showPassword, .pageIcon {
   position: absolute;
-  top: 55%;
 }
 
 .pageIcon {
   left: 11%;
+  top: 55%;
 }
 
 #showPassword {
   right: 12%;
+  top: 60%;
   cursor: pointer;
+  opacity: .8;
 }
 
 #showPassword:hover {
-  opacity: .6;
+  opacity: .65;
 }
 
 #error-msg {

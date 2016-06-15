@@ -656,3 +656,30 @@ div.intl-tel-input {
   bottom: -17px;
   color: red;
 }
+
+/*--- for thankyou page ---*/
+#reg-display #right-side.thankyou {
+  overflow: auto;
+}
+
+.thankyou > section {
+  margin: 30% auto 35%;
+  width: 80%;
+}
+
+.thankyou h1 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 7px;
+  font-size: 18px;
+  letter-spacing: .7px;
+  color: #757575;
+  font-weight: bold;
+}
+
+.thankyou p {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  font-size: 12px;
+}

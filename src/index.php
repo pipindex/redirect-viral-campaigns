@@ -99,8 +99,9 @@ function saveData()
         $phone = mysqli_real_escape_string($db, $_POST['phone']);
     }
 
-    $firstName = mysqli_real_escape_string($db, $_POST['firstName']);
-    $lastName = mysqli_real_escape_string($db, $_POST['lastName']);
+      $fullName = explode(" ", $_POST['name']);
+    $firstName = mysqli_real_escape_string($db, $fullName[0]);
+    $lastName = mysqli_real_escape_string($db, $fullName[1]);
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $course = mysqli_real_escape_string($db, $_POST['course']);
     $startDate = mysqli_real_escape_string($db, $_POST['date']);

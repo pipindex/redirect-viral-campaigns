@@ -580,6 +580,7 @@ ol {
 
 #dates {
   opacity: .5;
+  pointer-events: none;
 }
 
 .selectStyle select {

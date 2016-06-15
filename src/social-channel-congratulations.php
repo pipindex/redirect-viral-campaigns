@@ -123,7 +123,7 @@ foreach ($courses as $key => $Course) {
 					<div id="input-div">
 						<div class="selectStyle" id="course">
 							<div>
-								<select class="form-control-rk courseSelect" id="selectbox" name="course" >
+								<select class="form-control-rk courseSelect" id="selectbox" name="course">
 									<option class="desel" value="" disabled selected><?= translateLabel('Select Course',$translations) ?></option>
 									<?php foreach ($courses as $key => $value): ?>
 										<option value="<?= $key ?>" <?= $key == $_POST['course'] ? 'selected' : '' ?> ><?= translateLabel($value,$translations) ?></option>
@@ -135,7 +135,7 @@ foreach ($courses as $key => $Course) {
 					<div id="input-div">
 						<div class="selectStyle" id="dates">
 							<div>
-								<select class="form-control-rk courseDates" name='date' disabled>
+								<select class="form-control-rk courseDates" name='date'>
 									<option class="desel" value="" disabled selected><?= translateLabel('Select Date',$translations) ?></option>
 									 
 								</select>
@@ -172,10 +172,10 @@ foreach ($courses as $key => $Course) {
 		<script src="fb/js/jquery-loader.js"></script>
 		<script>
 			$("#course").on('change', function() { 
-  				$("#dates").css('opacity','1').removeAttr("disabled");
+  				$("#dates").css('opacity','1').css('pointer-events', 'auto');
 
   				if(courseDates[$(".courseSelect").val()].length <= 0){
-  					$("#dates").css('display','.5');
+  					$("#dates").css('display','.5').css('pointer-events', 'auto');
   					return;
   				}
 

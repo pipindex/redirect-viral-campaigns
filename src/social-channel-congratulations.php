@@ -105,10 +105,10 @@ foreach ($courses as $key => $Course) {
 				</h4>
 				<form id="log" action="/" class="roundtable" method="POST">
 					<div id="input-div" class="name-icon">
-						<input class="new-input-field <?php if (isset($errors['firstName'])){ echo "error";} ?>" id="full_name" name="firstName" type="text" placeholder="<?= translateLabel('First Name',$translations) ?> " value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
+						<input class="new-input-field <?php if (isset($errors['firstName'])){ echo "error";} ?>" id="full_name" name="firstName" type="text" placeholder="<?= translateLabel('Name',$translations) ?> " value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
 					</div>
 					<div id="input-div" class="name-icon">
-						<input class="new-input-field <?php if (isset($errors['lastName'])){ echo "error";} ?>" id="last_name" name="lastName" type="text" placeholder="<?= translateLabel('Last Name',$translations) ?> " value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">
+						<input class="new-input-field <?php if (isset($errors['lastName'])){ echo "error";} ?>" id="last_name" name="lastName" type="hidden" placeholder="<?= translateLabel('Last Name',$translations) ?> " value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">
 					</div>
 					<div id="input-div">
 						<input class="new-input-field" id="first_name" name="first_name" placeholder="<?= translateLabel('First Name',$translations) ?> " type="hidden" value="<?= $voucherUser->firstName ?>" >
@@ -135,7 +135,7 @@ foreach ($courses as $key => $Course) {
 					<div id="input-div">
 						<div class="selectStyle" id="dates">
 							<div>
-								<select class="form-control-rk courseDates" name='date'>
+								<select class="form-control-rk courseDates" name='date' disabled>
 									<option class="desel" value="" disabled selected><?= translateLabel('Select Date',$translations) ?></option>
 									 
 								</select>
@@ -145,7 +145,7 @@ foreach ($courses as $key => $Course) {
 					<div id="input-div" class="password-icon">
 						<input class="new-input-field" name="password" type="password" placeholder="<?= translateLabel('Choose Your Password',$translations) ?>">
 					</div>
-					<div id="input-div" class="password-icon">
+					<div id="input-div">
 						<input class="new-input-field" name="confirm_password" type="password" placeholder="<?= translateLabel('Re-enter Password',$translations) ?>">
 					</div>
 					<div class='errorMsg'><?php if (isset($errors['password'])){ echo translateLabel($errors['password'],$translations);} ?></div>
@@ -172,10 +172,10 @@ foreach ($courses as $key => $Course) {
 		<script src="fb/js/jquery-loader.js"></script>
 		<script>
 			$("#course").on('change', function() { 
-  				$("#dates").css('display','block');
+  				$("#dates").css('opacity','1').removeAttr("disabled");
 
   				if(courseDates[$(".courseSelect").val()].length <= 0){
-  					$("#dates").css('display','none');
+  					$("#dates").css('display','.5');
   					return;
   				}
 

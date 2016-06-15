@@ -579,7 +579,7 @@ ol {
 /*# sourceMappingURL=redesign-style.css.map */
 
 #dates {
-  display: none;
+  opacity: .5;
 }
 
 .selectStyle select {
@@ -594,8 +594,22 @@ form {
   position: relative;
 }
 
-.flag-container {
-  position: absolute;
-  left: 47px;
-  bottom: 24px;
+div.intl-tel-input {
+  width: 83.33% !important;
+}
+
+.selected-flag {
+  outline: none;
+}
+
+.selected-flag .iti-flag {
+  left: 27%;
+}
+
+.intl-tel-input .selected-flag .iti-arrow {
+  right: 3px !important;
+}
+
+#phone {
+  width: 100%;
 }

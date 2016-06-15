@@ -53,10 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // if(!$_POST['confirm_password'] || empty($_POST['confirm_password'])){
       //     $errors['confirm_password'] = translateLabel("EMPTY PASSWORD CONFIRM", $translations);
       // }
-      if($_POST['confirm_password'] != ($_POST['password'])){
-          $errors['password'] ="NOMATCH PASSWORD";
-          $valid = false;
-       }   
+      // if($_POST['confirm_password'] != ($_POST['password'])){
+      //     $errors['password'] ="NOMATCH PASSWORD";
+      //     $valid = false;
+      //  }   
       // if(!$_POST['course'] || empty($_POST['course'])){
       //     $errors['course'] = translateLabel("Empty COURSE", $translations);
       //     $valid = false;

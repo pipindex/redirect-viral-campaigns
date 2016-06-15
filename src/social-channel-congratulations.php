@@ -107,12 +107,7 @@ foreach ($courses as $key => $Course) {
 					<div id="input-div" class="name-icon">
 						<input class="new-input-field <?php if (isset($errors['firstName'])){ echo "error";} ?>" id="full_name" name="firstName" type="text" placeholder="<?= translateLabel('Name',$translations) ?> " value="<?php if (isset($_POST['firstName'])){ echo $_POST['firstName'];} ?>">
 					</div>
-					<div id="input-div" class="name-icon">
-						<input class="new-input-field <?php if (isset($errors['lastName'])){ echo "error";} ?>" id="last_name" name="lastName" type="hidden" placeholder="<?= translateLabel('Last Name',$translations) ?> " value="<?php if (isset($_POST['lastName'])){ echo $_POST['lastName'];} ?>">
-					</div>
-					<div id="input-div">
-						<input class="new-input-field" id="first_name" name="first_name" placeholder="<?= translateLabel('First Name',$translations) ?> " type="hidden" value="<?= $voucherUser->firstName ?>" >
-					</div>
+					
 					<div id="input-div" class="email-icon">
 						<input class="new-input-field <?php if (isset($errors['email'])){ echo "error";} ?>" id="email" name="email" type="email" placeholder="<?= translateLabel('Email',$translations) ?> " value="<?php if (isset($_POST['email'])){ echo $_POST['email'];} ?>">
 					</div>

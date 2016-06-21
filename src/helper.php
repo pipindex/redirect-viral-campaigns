@@ -22,14 +22,14 @@ function convertDate($dateString, $locale=null){
   else{
     $time = strtotime($dateString);
     $oldLocale = setlocale(LC_TIME, $locale);
-    return strftime("%A %b %d, %Y %I:%M %p GMT", $time); 
+    return strftime("%A %b %d, %Y %I:%M %p Egypt Time", $time);
     setlocale(LC_TIME, $oldLocale);
   }
 }
 function getDates($course,$lang){
   switch($lang){
-    
-  case 'de': 
+
+  case 'de':
       switch($course){
         case 'photography':
           $dates = array(convertDate('2016-06-27 18:00:00', 'de_DE'), convertDate('2016-07-25 18:00:00', 'de_DE'));
@@ -51,7 +51,7 @@ function getDates($course,$lang){
           break;
       }
   break;
-  case 'fr': 
+  case 'fr':
       switch($course){
         case 'photography':
           $dates = array(convertDate('2016-06-27 18:00:00','fr_FR'), convertDate('2016-07-25 18:00:00','fr_FR'));
@@ -73,7 +73,7 @@ function getDates($course,$lang){
           break;
       }
   break;
-  case 'es': 
+  case 'es':
       switch($course){
         case 'photography':
           $dates = array(convertDate('2016-06-27 18:00:00','es_ES'), convertDate('2016-07-25 18:00:00','es_ES'));
@@ -86,7 +86,7 @@ function getDates($course,$lang){
           break;
       }
   break;
-  case 'it': 
+  case 'it':
       switch($course){
         case 'photography':
           $dates = array(convertDate('2016-06-27 18:00:00', 'it_IT'), convertDate('2016-07-25 18:00:00', 'it_IT'));
@@ -103,10 +103,10 @@ function getDates($course,$lang){
         case 'foundation':
           $dates = array(convertDate('2016-06-27 18:00:00', 'it_IT'),convertDate('2016-07-25 18:00:00', 'it_IT'));
           break;
-        }  
+        }
       break;
-  
-  case 'pt': 
+
+  case 'pt':
       switch($course){
         case 'photography':
           $dates = array(convertDate('2016-06-27 22:00:00', 'pt_PT'), convertDate('2016-07-25 22:00:00', 'pt_PT'));
@@ -128,10 +128,10 @@ function getDates($course,$lang){
           break;
         case 'foundation':
           $dates = array(convertDate('2016-06-27 19:00:00', 'pt_PT'),convertDate('2016-07-25 19:00:00', 'pt_PT'));
-          break;          
+          break;
       }
   break;
-  case 'jp': 
+  case 'jp':
       switch($course){
         case 'photography':
           $dates = array(convertDate('2016-06-27 11:30:00', 'jp_JP'), convertDate('2016-07-25 11:30:00', 'jp_JP'));
@@ -144,88 +144,88 @@ function getDates($course,$lang){
           break;
       }
   break;
-  default: 
+  default:
       switch($course){
         case 'photography':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'lightroom':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'photoshop':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'wedding-photo':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'investment':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'nutrition':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'sports-nutrition':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'marketing':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'social-media':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'blogging':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'web-development':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'web-design':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'graphic-design':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
           case 'mobile-app':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
           case 'kids-coding':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
           case 'kids-coding-2':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
           case 'kids-python':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'excel':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'careers':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'music':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'guitar':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'cookery':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'business-english':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'Entrepreneurial':
-          $dates = array(convertDate('2015-06-29 19:00:00'),convertDate('2015-08-03 19:00:00'));
+          $dates = array(convertDate('2015-06-28 18:00:00'),convertDate('2015-08-06 18:00:00'));
           break;
         case 'budgeting':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'sales':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
         case 'foundation':
-          $dates = array(convertDate('2016-06-27 19:00:00'),convertDate('2016-07-25 19:00:00'));
+          $dates = array(convertDate('2016-06-28 18:00:00'),convertDate('2016-07-26 18:00:00'));
           break;
 
       }
